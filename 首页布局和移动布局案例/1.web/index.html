@@ -1,0 +1,348 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!-- html:xt 快捷键  -->
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>天天生鲜</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<!-- 
+	html:xt 
+	前端页面开发流程
+	1.创建页面项目目录
+	2.使用Photoshop对效果图切图，切出网页制作中需要的小图片
+	3.将装饰类图像合并，制作成雪碧图
+	4.结合Photoshop和代码编辑器，参照效果图，进行html和css代码书写，制作页面
+ -->
+
+<body>
+	<!-- 页面头部 -->
+	<div class="header_con">
+		<div class="header">
+			<div class="welcome fl">欢迎来到天天生鲜！</div>
+
+			<div class="user_con fr">
+				<ul class="login_btns fl">
+					<li><a href="#">登录</a></li>
+					<li><span>|</span></li>
+					<li><a href="#">注册</a></li>
+				</ul>
+				
+				<ul class="user_info">
+					欢迎您：<em>陈寒</em>
+				</ul>
+				<ul class="user_btns fl">
+					<li><span>|</span></li>
+					<li><a href="#">我的购物车</a></li>
+					<li><span>|</span></li>
+					<li><a href="#">我的订单</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!-- 页面logo，搜索，购物车 -->
+	<div class="center_con">
+		<a href="index.html" class="logo fl"><img src="./images/logo02.png" alt="天天生鲜网站logo" /></a>
+		<div class="search_con fl">
+			<form action="">
+				<input type="text" class="input_tet fl" placeholder="搜索" />
+				<input type="submit" class="input_sub fr" value="搜索" />
+			</form>
+
+		</div>
+		<div class="chart_con fr">
+			<a href="#" class="chart_link fl">我的购物车</a>
+			<div class="chart_num fl">0</div>
+		</div>
+	</div>
+
+	<!-- 主菜单 -->
+	<div class="main_menu_con">
+		<div class="center_con2">
+			<h2 class="fl">全部商品分类</h2>
+			<ul>
+				<li><a href="#" class="fl">首页</a></li>
+				<li><a href="#" class="fl">手机生鲜</a></li>
+				<li><a href="#" class="fl">抽奖</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 二级菜单，幻灯片，广告 -->
+	<div class="center_con3">
+		<ul class="sub_menu_con fl">
+			<li><a href="" class="icon01">新鲜水果</a></li>
+			<li><a href="" class="icon02">海鲜水产</a></li>
+			<li><a href="" class="icon03">猪牛羊肉</a></li>
+			<li><a href="" class="icon04">禽类蛋品</a></li>
+			<li><a href="" class="icon05">有机蔬菜</a></li>
+			<li><a href="" class="icon06">速冻食品</a></li>	
+		</ul>
+		<div class="slide_con fl">
+			<ul class="slide">
+				<li><a href=""><img src="./images/slide01.jpg" alt="幻灯片" /></a></li>
+				<li><a href=""><img src="./images/slide02.jpg" alt="幻灯片" /></a></li>
+				<li><a href=""><img src="./images/slide03.jpg" alt="幻灯片" /></a></li>
+				<li><a href=""><img src="./images/slide04.jpg" alt="幻灯片" /></a></li>
+			</ul>
+
+			<div class="prev"></div>
+			<div class="next"></div>
+
+			<ul class="points">
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+
+		</div>
+		<div class="advs fl">
+			<a href="index.html"><img src="./images/adv01.jpg" alt="广告" /></a>
+			<a href="index.html"><img src="./images/adv02.jpg" alt="广告" /></a>
+		</div>
+	</div>
+
+	<!-- 商品模块 -->
+	<div class="common_model">
+		<div class="common_con_title">
+			<h3>时令水果</h3>
+			<ul>
+				<li><a href="">鲜芒</a></li>
+				<li><a href="">加州提子</a></li>
+				<li><a href="">海南香蕉</a></li>
+			</ul>		
+			<a href="index.html" class="more fr">查看更多 &gt;</a>
+		</div>
+
+		<div class="goods_banner fl"><a href="#"><img src="./images/banner01.jpg" alt="商品品牌" /></a></div>
+		<ul class="goods_list fl">
+			<li>
+				<h4>草莓</h4>
+				<a href="#"><img src="./images/goods003.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 38.00</div>
+			</li>
+			<li>
+				<h4>柠檬</h4>
+				<a href="#"><img src="./images/goods001.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>葡萄</h4>
+				<a href="#"><img src="./images/goods002.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>猕猴桃</h4>
+				<a href="#"><img src="./images/goods012.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 28.00</div>
+			</li>
+		</ul>
+	</div>	
+	
+	<div class="common_model">
+		<div class="common_con_title">
+			<h3>海鲜水产</h3>
+			<ul>
+				<li><a href="">基围虾</a></li>
+				<li><a href="">扇贝</a></li>
+				<li><a href="">刀鱼</a></li>
+			</ul>		
+			<a href="index.html" class="more fr">查看更多 &gt;</a>
+		</div>
+	
+
+		<div class="goods_banner fl"><a href="#"><img src="./images/banner02.jpg" alt="商品品牌" /></a></div>
+		<ul class="goods_list fl">
+			<li>
+				<h4>基围虾</h4>
+				<a href="#"><img src="./images/goods018.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 38.00</div>
+			</li>
+			<li>
+				<h4>扇贝</h4>
+				<a href="#"><img src="./images/goods019.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>刀鱼</h4>
+				<a href="#"><img src="./images/goods020.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>皮皮虾</h4>
+				<a href="#"><img src="./images/goods021.jpg" alt="商品图片" /></a>
+				<div class="price">￥ 28.00</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="common_model">
+		<div class="common_con_title">
+			<h3>猪牛羊肉·</h3>
+			<ul>
+				<li><a href="">精品牛排</a></li>
+				<li><a href="">前腿猪肉</a></li>
+				<li><a href="">精品羊肉</a></li>
+			</ul>		
+			<a href="index.html" class="more fr">查看更多 &gt;</a>
+		</div>
+	
+
+		<div class="goods_banner fl"><a href="#"><img src="./images/banner03.jpg" alt="商品品牌" /></a></div>
+		<ul class="goods_list fl">
+			<li>
+				<h4>前腿猪肉</h4>
+				<a href="#"><img src="./images/goods022.png" alt="商品图片" /></a>
+				<div class="price">￥ 38.00</div>
+			</li>
+			<li>
+				<h4>优质牛排</h4>
+				<a href="#"><img src="./images/goods023.png" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>嫩肩牛排</h4>
+				<a href="#"><img src="./images/goods024.png" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>精品羊肉</h4>
+				<a href="#"><img src="./images/goods025.png" alt="商品图片" /></a>
+				<div class="price">￥ 28.00</div>
+			</li>
+		</ul>
+	</div>
+	
+		<div class="common_model">
+		<div class="common_con_title">
+			<h3>禽类蛋品</h3>
+			<ul>
+				<li><a href="">土家鸡蛋</a></li>
+				<li><a href="">香辣鸭舌</a></li>
+				<li><a href="">肥美鸡腿</a></li>
+			</ul>		
+			<a href="index.html" class="more fr">查看更多 &gt;</a>
+		</div>
+	
+
+		<div class="goods_banner fl"><a href="#"><img src="./images/banner04.jpg" alt="商品品牌" /></a></div>
+		<ul class="goods_list fl">
+			<li>
+				<h4>土家鸡蛋</h4>
+				<a href="#"><img src="./images/goods026.png" alt="商品图片" /></a>
+				<div class="price">￥ 38.00</div>
+			</li>
+			<li>
+				<h4>肥美鸡腿</h4>
+				<a href="#"><img src="./images/goods027.png" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>骨肉相连</h4>
+				<a href="#"><img src="./images/goods028.png" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>香辣鸭舌</h4>
+				<a href="#"><img src="./images/goods029.png" alt="商品图片" /></a>
+				<div class="price">￥ 28.00</div>
+			</li>
+		</ul>
+	</div>
+	
+		<div class="common_model">
+		<div class="common_con_title">
+			<h3>新鲜蔬菜</h3>
+			<ul>
+				<li><a href="">无机番茄</a></li>
+				<li><a href="">诱人辣椒</a></li>
+				<li><a href="">农家南瓜</a></li>
+			</ul>		
+			<a href="index.html" class="more fr">查看更多 &gt;</a>
+		</div>
+	
+
+		<div class="goods_banner fl"><a href="#"><img src="./images/banner05.jpg" alt="商品品牌" /></a></div>
+		<ul class="goods_list fl">
+			<li>
+				<h4>无机番茄</h4>
+				<a href="#"><img src="./images/goods030.png" alt="商品图片" /></a>
+				<div class="price">￥ 38.00</div>
+			</li>
+			<li>
+				<h4>诱人红辣椒</h4>
+				<a href="#"><img src="./images/goods031.png" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>农家南瓜</h4>
+				<a href="#"><img src="./images/goods033.png" alt="商品图片" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>新鲜竹笋</h4>
+				<a href="#"><img src="./images/goods032.png" alt="商品图片" /></a>
+				<div class="price">￥ 28.00</div>
+			</li>
+		</ul>
+	</div>
+	
+		<div class="common_model">
+		<div class="common_con_title">
+			<h3>速冻食品</h3>
+			<ul>
+				<li><a href="">速冻饺子</a></li>
+				<li><a href="">思念油条</a></li>
+				<li><a href="">熊猫馒头</a></li>
+			</ul>		
+			<a href="index.html" class="more fr">查看更多 &gt;</a>
+		</div>
+	
+
+		<div class="goods_banner fl"><a href="#"><img src="./images/banner06.jpg" alt="商品品牌" /></a></div>
+		<ul class="goods_list fl">
+			<li>
+				<h4>速冻饺子</h4>
+				<a href="#"><img src="./images/goods034.png" alt="商品图片"  width="180px" height="180px" /></a>
+				<div class="price">￥ 38.00</div>
+			</li>
+			<li>
+				<h4>思念油条</h4>
+				<a href="#"><img src="./images/goods035.png" alt="商品图片" width="180px" height="180px" /></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>大肉丸子</h4>
+				<a href="#"><img src="./images/goods036.png" alt="商品图片"  width="180px" height="180px"/></a>
+				<div class="price">￥ 18.00</div>
+			</li>
+			<li>
+				<h4>熊猫馒头</h4>
+				<a href="#"><img src="./images/goods037.png" alt="商品图片"  width="180px" height="180px" /></a>
+				<div class="price">￥ 28.00</div>
+			</li>
+		</ul>
+	</div>
+	
+
+	<!-- 底部详情 -->
+	<div class="footer">
+		<div class="footer_link">
+			<a href="#">关于我们</a>
+			<span>|</span>
+			<a href="#">联系我们</a>
+			<span>|</span>
+			<a href="#">招聘人才</a>
+			<span>|</span>
+			<a href="#">友情链接</a>
+		</div>
+
+		<p>CopyRight © 2019 北京天天生鲜信息技术有限公司 All Rights Reserved</p>
+		<p>电话： 010-****888 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;京ICP备********8号</p>
+	</div>
+</body>
+</html>

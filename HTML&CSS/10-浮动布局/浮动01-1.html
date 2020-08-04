@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动</title>
+	<!-- 浮动的特性：
+	1、浮动元素有左浮动（left），和右浮动（right）
+	2、浮动的元素向左或者向右，碰到元素的边界、其他元素才会停下
+	3、相邻浮动元素可一并在一行，超过父级宽度就换行
+	4、浮动让行内元素或块元素转换为行内块元素（没有间隙）
+	5、浮动元素后面没有浮动的元素会占据浮动元素位置，没有浮动的元素内的文字会避开浮动的元素，形成文字饶图
+	6、父元素如果没有设置尺寸（一般高度不设定）父元素内整体浮动的元素无法撑开父元素，父元素需要清除浮动
+	7、浮动元素之间没有垂直margin合并 -->
+	<style>
+		.con{
+			width: 402px;
+			height: 82px;
+			border:1px solid gold;
+			margin:30px auto 0;
+		}
+		.con div{
+			width: 60px;
+			height: 60px;
+			margin:10px;
+		}
+		.box1{
+			background-color: #90ee90;
+			float: left;
+		}
+
+		.box2{
+			background-color: pink;
+			float: right;
+		}
+		
+		/*示例二*/
+		.con2{
+			width: 300px;
+			height: 300px;
+			border:1px solid #000;
+			margin:50px auto 0;
+		}
+		.con2 div{
+			width: 80px;
+			height:80px;
+			background-color: gold;
+			margin:10px;
+			float: left;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</div>
+
+	<div class="con2">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+	</div>
+</body>
+</html>

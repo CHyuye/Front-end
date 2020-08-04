@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script>
+		$(function(){
+
+			//获取class类时需要加'.'
+			var $div = $('.box');
+
+			//在原样式上加上.big样式
+			$div.addClass('big'); //加上样式名不需要.big
+
+			// 在原样式上删除.color样式
+			$div.removeClass('color'); //删除也不用加'.'
+
+			//移除多个样式
+			$div.removeClass('color color2 color3');
+
+			//重复切换anotherClass样式
+			$div.toggleClass('anotherClass');
+
+			var sTr = $div.css('font-size');
+			alert(sTr);
+		})
+	</script>
+
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			text-align: center;
+			line-height: 200px;
+		}
+
+		.big{
+			font-size: 24px;
+		}
+
+		.color{
+			background-color: lightgreen;
+			color:#00f;
+		}
+	</style>
+</head>
+<body>
+	<div class="box color">这是一个div元素</div>
+</body>
+</html>

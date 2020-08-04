@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css选择器</title>
+	<style>
+		/*第一种——标签选择器，此种选择器影响范围大*/
+		*{
+			font-family: '华文行楷';
+		}
+		div{
+			font-size: 20px;
+			color: rgb(255,200,0);
+			line-height: 30px;
+			text-indent: 40px;
+		}
+		
+		/*第二种选择器 —— id选择器，通过id名来选择元素，元素的id名不能重复，
+		所以一个样式设置项只能对应页面上的一个元素，不能复用，一般id名是给程序用的，所以不建议用此
+		*/
+		#id1{
+			color: red;
+			font-size: 30px;
+			text-align: center;
+		}
+		#em1{
+			color: red;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+
+
+	</style>
+
+</head>
+<body>
+	<p id="id1">1小时59分40秒！这是目前人类首次将马拉松跑进2小时，我们有幸见证历史性时刻！</p>
+	<div>
+		1小时59分40秒！这是目前人类首次将马拉松跑进2小时，我们有幸见证历史性时刻！
+		在维也纳普拉特公园，刚刚结束的马拉松159挑战中，<em id="em1">“马拉松第一人”</em>基普乔格以1小时59分40秒完成比赛，创造了人类马拉松历史上的奇迹！此时，他已经接近35岁。
+		不过需要注意到的是，这个成绩不会被国际田联认可，因为他加的BUFF实在太多了。
+	</div>
+	<div>
+		眼光长远是理性的，但也是苦闷的，因为美好永远只发生在将来。
+	</div>
+</body>
+</html>

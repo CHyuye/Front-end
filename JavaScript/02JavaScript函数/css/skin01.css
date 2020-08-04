@@ -1,0 +1,10 @@
+body{
+	background-color: #0ff;
+}
+
+input{
+	width: 150px;
+	height: 50px;
+	background-color: gold;
+	border:0;
+}

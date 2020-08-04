@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+		1.document
+		 document.getElementById //通过id获取元素
+		 document.getElementsByTagName //通过标签名获取元素
+		 document.referrer //获取上一个跳转页面地址(需要服务器环境)
+		*/
+
+		/*
+		2.location
+		 window.location.href  //获取或者重定url地址
+		 window.location.search  //获取地址参数部分
+		 window.location.hash  // 获取页面锚点或者哈希值
+		*/
+		window.onload = function(){
+			// 存储上次页面的地址 —— 挺有用的
+			//var sUrl = document.referrer;
+			/* 第一种 window.location.href  //获取后者重定url地址
+			var oBtn = document.getElementById('btn01');
+			oBtn.onclick = function(){
+				// window.location.href = sUrl;  需要服务器环境配合
+				window.location.href = 'http://www.baidu.com';
+			}
+			*/
+
+			// 第二种和第三种都是通过获取页面地址的参数，来跳转访问其他页面
+			// 第二种 window.location.search  //获取地址参数部分  符号 '?..'
+			var oBody = document.getElementById('body01'); 
+			var sData = window.location.search;
+			alert(sData);
+			//第三种 window.location.hash  // 获取页面锚点或者哈希值 符号 '#'
+			var oHash = window.location.hash;
+			alert(oHash);
+
+			if(sData!='')
+			{
+				var iRr = sData.split('=');
+				var iNum = iRr[1];
+				if(iNum == 1){
+					oBody.style.backgroundColor = 'gold';
+				}
+				else if(iNum == 2){
+					oBody.style.backgroundColor = 'pink';
+				}
+				else if(iNum == 3){
+					oBody.style.backgroundColor = 'lightgreen';
+				}
+			}
+		}
+	</script>
+</head>
+<body id="body01">
+	<input type="button" value="跳转" id="btn01">
+	<h3>02页面</h3>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<style>
+		.box{
+			background-color: lightgreen;
+			width: 200px;
+			height: 200px;
+			margin:50px auto 0;
+			padding:20px;
+			border:10px solid #0ff;
+		}
+	</style>
+	<script>
+		$(function(){
+			var $div = $('.box');
+			//盒子内容的尺寸
+			console.log($div.width());
+			console.log($div.height());
+
+			//盒子内容加上padding的尺寸
+			console.log($div.innerWidth());
+			console.log($div.innerHeight());
+
+			// 盒子真实尺寸，内容尺寸+padding+border
+			console.log($div.outerWidth());
+			console.log($div.outerHeight());
+
+			//盒子真实尺寸加上margin
+			console.log($div.outerWidth(true));
+			console.log($div.outerHeight(true));
+
+		})
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

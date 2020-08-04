@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+		var iNum01 = 11;
+		var iNum02 = 22;
+
+		if(iNum01 > iNum02){
+			alert(true);
+		}
+		else{
+			alert(false);
+		}
+		*/
+
+		//制作按钮切换显示
+		window.onload = function(){
+
+			var oBtn = document.getElementById('btn');
+			var oDiv = document.getElementById('div1');
+			// oDiv.style.display是读取标签里的display属性值，如果没有写，默认为none。
+			oBtn.onclick = function(){
+				// if(oDiv.style.display == 'block' || oDiv.style.display == '')
+				if(oDiv.style.display == 'none'){
+					oDiv.style.display = 'block';
+				}
+				else{
+					oDiv.style.display = 'none';
+				}
+			}
+		}
+
+	</script>
+
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			margin: 50px auto 0;
+			background-color: gold;
+		}
+		.input{
+			width: 50px;
+			height: 50px;
+			margin:10px auto 0;
+		}
+
+		.btn01{
+			width: 50px;
+			height: 50px;
+			border-radius: 20px;
+			border:3px solid #0ff;
+			background-color: gold;
+		}
+	</style>
+</head>
+<body>
+	<div class="input">
+		<input type="button" value="切换" id="btn" class="btn01">
+	</div>
+	<div class="box" id="div1"></div>
+</body>
+</html>

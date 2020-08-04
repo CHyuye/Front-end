@@ -1,0 +1,435 @@
+/*页面头部样式*/
+body{
+	font-family: 'Microsoft Yahei';
+	font-size: 14px;
+}
+.header_con{
+	height: 29px;
+	border-bottom: 1px solid #ddd;
+	background-color: #f7f7f7;
+}
+
+.header{
+	width: 1200px;
+	height: 29px;
+	margin:0 auto;
+}
+
+.welcome{
+	font-size: 12px;
+	color: #666;
+	line-height: 29px;
+}
+
+/*.user_con{
+	background: gold;
+}*/
+
+.user_info{
+	display: none;
+	font-size: 12px;
+	line-height: 29px;
+	color: #666;
+}
+
+.user_info em{
+	color: #f80;
+}
+
+.login_btns li, .user_btns li{
+	float: left;
+	height: 29px;
+}
+
+.login_btns a, .login_btns span, .user_btns a, .user_btns span{
+	display: block;
+	line-height: 29px;
+	font-size: 12px;
+	color: #666;
+}
+
+.login_btns span, .user_btns span{
+	color: #cecece;
+	margin:0 10px;
+}
+
+.login_btns a:hover, .user_btns a:hover{
+	color: #f80;
+}
+
+
+/*页面logo，搜索，购物车*/
+.center_con{
+	width: 1200px;
+	height: 115px;
+	margin:0 auto;	
+}
+
+.logo{
+	margin:29px 0 0 17px;
+}
+
+.search_con{
+	width: 617px;
+	height: 40px;
+	background:gold;
+	margin:36px 0 0 124px;
+	border:1px solid #37ab40;
+	background: url(../images/icons.png) 10px -337px no-repeat;
+}
+
+.search_con .input_tet{
+	width: 480px;
+	height: 38px;
+	border:0px;
+	margin-left: 36px;
+
+/*	去掉获得焦点是显示的蓝色框*/
+	outline: none;
+}
+
+.search_con .input_sub{
+	width: 100px;
+	height: 41px;
+	background-color: #37ab40;
+	border:0px;
+	font-size: 14px;
+	color: #fff;
+	
+	/*将鼠标经过的形状设置为手型*/
+	cursor: pointer;
+}
+
+.chart_con{
+	width: 200px;
+	height: 40px;
+	margin-top: 36px;
+	background: gold;
+}
+
+.chart_con .chart_link{
+	width: 158px;
+	height: 38px;
+	border:1px solid #ddd;
+	background: url(../images/icons.png) 12px -298px no-repeat #f7f7f7;
+	text-indent: 56px;
+	line-height: 38px;
+	font-size: 14px;
+	color: #37ab40;
+}
+
+.chart_con .chart_num{
+	width:40px;
+	height: 40px;
+	background-color: #f80;
+	text-align: center;
+	line-height: 40px;
+	font:bold 18px/40px 'Microsoft Yahei';
+	color: #fff;
+}
+
+
+/*主菜单*/
+.main_menu_con{
+	width: 100%;
+	height: 40px;
+	border-bottom: 2px solid #39a93e;
+}
+
+.center_con2{
+	width: 1200px;
+/*	background-color: gold;*/
+	height: 40px;
+	margin:0 auto;
+}
+
+.center_con2 h2{
+	float: left;
+	width: 200px;
+	height: 40px;
+	background-color: #39a93e;
+	text-align: center;
+	font:normal 14px/40px 'Microsoft Yahei';
+	color: white;
+}
+
+.center_con2 li{
+	float: left;
+	height: 40px;
+
+}
+
+.center_con2 ul{
+	float: left;
+	overflow: hidden;
+}
+.center_con2 li a{
+	float: left;
+	display: block;
+	height: 14px;
+	line-height: 14px;
+	padding:0 20px;
+	border-left: 1px solid #666;
+	margin-top: 13px;
+	margin-left: -1px;
+	color: #666;
+}
+
+.center_con2 li a:hover{
+	color: #f80;
+}
+
+/*<!-- 二级菜单，幻灯片，广告 -->*/
+.center_con3{
+	height: 270px;
+	width: 1200px;
+	margin:0 auto;
+}
+
+.center_con3 .sub_menu_con{
+	width: 200px;
+	height: 270px;
+}
+
+.sub_menu_con li{
+	width: 198px;
+	height: 44px;
+	border:1px solid #eee;
+	border-top:0px;
+	background: url(../images/icons.png) 178px -257px no-repeat;
+}
+
+.sub_menu_con a{
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	text-indent:71px;
+	color: #333;
+	background: url(../images/icons.png) 32px 0px no-repeat;
+}
+/*.sub_menu_con .icon01{
+	background: url(../images/icons.png) 32px -20px no-repeat;
+}*/
+.sub_menu_con .icon02{
+	background: url(../images/icons.png) 32px -44px no-repeat;
+}
+.sub_menu_con .icon03{
+	background: url(../images/icons.png) 32px -88px no-repeat;
+}
+.sub_menu_con .icon04{
+	background: url(../images/icons.png) 30px -132px no-repeat;
+}
+.sub_menu_con .icon05{
+	background: url(../images/icons.png) 32px -176px no-repeat;
+}
+.sub_menu_con .icon06{
+	background: url(../images/icons.png) 32px -221px no-repeat;
+}
+
+.sub_menu_con a:hover{
+	color: #f80;
+}
+
+
+.center_con3 .slide_con{
+	width: 760px;
+	height: 270px;
+/*	background-color: pink;*/
+	position: relative;
+	overflow: hidden;
+}
+
+.slid_con .slide{
+	position: absolute;
+	width:4560px;
+	height: 270px;
+	left: 0px;
+	top: 0px;
+}
+
+.slid_con .slide li{
+	float: left;
+}
+
+.prev, .next{
+	position: absolute;
+	height: 25px;
+	width: 20px;
+	background: url(../images/icons.png) left -387px no-repeat;
+	left: 0px;
+	top: 0px;
+	cursor: pointer;
+}
+
+.prev{
+	left: 10px;
+	top: 122px;
+}
+
+.next{
+	background-position: left -425px;
+	left:732px;
+	top: 122px;
+}
+
+.points{
+	position: absolute;
+	width: 100%;
+	height: 11px;
+/*	background-color: green;*/
+	left: 0px;
+	bottom: 10px;
+	font-size: 0;
+	text-align: center;
+}
+
+.points li{
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	background-color: #9f9f9f;
+	margin:0 5px;
+	border-radius: 50%;
+}
+
+.points .active{
+	background-color: #cecece;
+	cursor: pointer;
+}
+
+.center_con3 .advs{
+	width: 240px;
+	height: 270px;
+	background-color: lightgreen;
+}
+
+/*解决图片3像素对不齐的bug*/
+.advs img{
+	display: block;
+}
+
+
+/*商品展示*/
+.common_model{
+	width: 1200px;
+	height: 337px;
+	margin:20px auto 0px;
+/*	background-color: gold;*/
+}
+
+.common_con_title{
+	height: 35px;
+	border-bottom: 2px solid #42ab46;
+}
+.common_con_title h3{
+	float: left;
+	font:bold 16px/35px 'Microsoft Yahei';
+	color: #37ab40;
+}
+
+.common_con_title ul{
+	float: left;
+	border-left: 1px solid #666;
+	height: 12px;
+	margin:12px 0 0 20px;
+}
+
+.common_con_title ul li{
+	float: left;
+	line-height: 12px;
+	margin-left: 15px;
+}
+
+.common_con_title ul li a{
+	line-height: 12px;
+	font-size: 12px;
+	color: #666;
+}
+
+.common_con_title ul li a:hover{
+	color: #f80;
+}
+
+.common_con_title .more{
+	float: right;
+	font:normal 12px/35px 'Microsoft Yahei';
+	color: #666;
+}
+
+.conmmon_con_title .more:hover{
+	color: #f80;
+}
+
+/*商品品牌*/
+.goods_banner{
+	width: 200px;
+	height: 300px;
+}
+
+.goods_list{
+	height: 300px;
+	width: 1000px;
+}
+
+.goods_list li{
+	width: 245px;
+	height: 299px;
+	border-right: 1px solid #ededed;
+	border-bottom: 1px solid #ededed;
+	float: left;
+}
+
+.goods_list li:hover{
+	border:1px solid #f80;
+}
+
+.goods_list li h4{
+	text-align: center;
+	font:normal 14px/50px 'Microsoft Yahei';
+	color: #666;
+}
+
+.goods_list li a{
+	display: block;
+	width: 180px;
+	height: 180px;
+	margin:0 auto;
+}
+
+.goods_list li .price{
+	font:bold 20px/50px 'Microsoft Yahei';
+	color: #c40000;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.footer{
+	border-top: 2px solid #4ab14e;
+	margin: 30px 0 40px;
+}
+
+.footer_link{
+	text-align: center;
+	margin-top: 30px;
+}
+
+.footer_link a{
+	color: #4e4e4e;
+	font-size: 12px;
+}
+
+.footer_link a:hover{
+	color: #f80;
+}
+
+.footer span{
+	color: #4e4e4e;
+	font-size: 12px;
+	padding:0 10px;
+}
+
+.footer p{
+	text-align: center;
+	font-size: 12px;
+	margin-top: 14px;
+}

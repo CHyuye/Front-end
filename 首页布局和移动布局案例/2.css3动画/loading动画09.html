@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+		/*定义动画*/
+		@keyframes loading{
+			from{
+				transform: scale(1,1);
+			}
+			to{
+				transform: scale(1, 0.5);
+			}
+		}
+		.con{
+			width:300px;
+			height: 158px;
+			border:1px solid #000;
+			margin:150px auto 0;
+		}
+		
+		.con div{
+			width: 30px;
+			height: 100px;
+			float: left;
+			background: gold;
+			margin:15px;
+			border-radius: 15px;
+			animation: loading 500ms ease infinite alternate;
+		}
+		/*.box1{
+			background-color: red;
+		}*/
+		/*css新增选择器 表示父类中的子类元素*/
+		.con div:nth-child(1){
+			background-color: red;
+		}
+		.con div:nth-child(2){
+			background-color: green;
+			animation-delay: 200ms;
+		}
+		.con div:nth-child(3){
+			background-color: pink;
+			animation-delay: 300ms;
+		}
+		.con div:nth-child(4){
+			background-color: lightgreen;
+			animation-delay: 400ms;
+		}
+		.con div:nth-child(5){
+			background-color: lightblue;
+			animation-delay: 500ms;
+		}
+		.con p{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4"></div>
+		<div class="box5"></div>
+		<p>loading...</p>
+	</div>
+</body>
+</html>

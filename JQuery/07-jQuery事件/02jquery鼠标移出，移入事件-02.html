@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.con, .con2{
+			width: 200px;
+			height: 200px;
+			background-color: #0ff;
+			border:2px dotted #000;
+		}
+
+		.box, .box2{
+			width: 100px;
+			height: 100px;
+			background-color: lightgreen;
+		}
+	</style>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+
+			// mouseover()和mouseout()事件，鼠标移入或移出子元素会不断触发，因为冒泡事件
+			$('.con').mouseover(function(){
+				console.log("鼠标移入");
+			})
+
+			$('.con').mouseout(function(){
+				console.log('鼠标移出');
+			})
+
+
+			/*
+			// mouseenter() and mouseleave()事件，鼠标移入移出事件不会触发子元素
+			$('.con2').mouseenter(function(){
+				console.log('鼠标移入');
+			})
+			$('.con2').mouseleave(function(){
+				console.log('鼠标移出');
+			})
+			*/
+
+			//使用hover() 可以合并成下面的写法
+			//hover() 同时为mouseenter() and mouseleave() 指定处理函数
+			$('.con2').hover(function(){
+				console.log('移出');
+			},function(){
+				console.log('移入');
+			})
+
+
+		})
+	</script>
+</head>
+<body>
+	<div class="con">
+		<div class="box"></div>
+	</div>
+	<br />
+	<br />
+	<br />
+	<div class="con2">
+		<div class="box2"></div>
+	</div>
+</body>
+</html>

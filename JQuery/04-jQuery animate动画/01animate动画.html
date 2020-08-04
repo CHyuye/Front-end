@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script>
+		$(function(){
+			$('#btn').click(function(){
+				var $box = $('.box');
+				$box.animate({"width":'500px'},1000,function(){
+					$box.animate({'height':'500px'},1000,function(){
+						$box.animate({'opacity':'0.5'});
+					});
+				});
+			})
+
+			$('#btn1').click(function(){
+				var $box1 = $(".box1");
+				$box1.stop().animate({'width':'+=100px'});
+			})
+		})
+	</script>
+	<style>
+		.box, .box1{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+
+		}
+		#btn, #btn1{
+			font-size: 20px;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="动画" id="btn">
+	<div class="box"></div>
+	<input type="button" value="动画" id="btn1">
+	<div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script>
+		// var 变量得到的是一个持久有效的变量
+		// $(function(){
+		// 	var $div = $('div');
+		// 	$div.css({'backgroundColor':'#0ff'});
+		// })
+
+		// 不使用var创建的变量
+		$(function(){
+			$('div').css({'backgroundColor':'gold'});
+			$('div').has(p).css({'color':'red'}); //选择带p标签的元素
+			//eq()方法从0数，就是第5个元素
+			$('div').eq(4).css({'textIndent':'30px'});
+			$('div').eq(4).prev().css({'fontSize':'30px'});  //第5个div前面紧挨的同辈元素
+			//$('div').eq(4).prevAll().css({'fontSize':'30px'});  //选择div元素之前所有的同辈元素
+			$('div').eq(5).next().css({'color':'pink'});  //div后面紧挨这的元素
+
+			$('div').siblings();  //选择div的同级元素
+			$('div').children();  //选择div所有子元素
+			$('div').parent();    //选择div所有父元素
+
+
+			//判断是否选择到了元素，通过length属性
+			$div = $('#div1');
+			alert($div.length);
+
+			//没有选择元素，程序也不会报错，length属性返回0
+			$div1 = $('#div2');
+			alert($div2.length);
+
+			// if($div2.length>0)  通过length属性判断是否选中正确元素
+
+		})
+		
+	</script>
+</head>
+<body>
+	<div id="div1">1</div>
+	<div><p>2</p></div>
+	<div>3</div>
+	<div>4</div>
+	<div>5</div>
+	<div>6</div>
+</body>
+</html>

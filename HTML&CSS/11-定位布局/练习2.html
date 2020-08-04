@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.menu{
+			height: 80px;
+			background-color: #0ff;
+			position: fixed;  /*当设置了定位，需要给盒子宽度， 不然它会按照内给宽度*/
+			width: 960px;
+
+			/*技巧： 使菜单栏固定悬浮在顶部居中位置*/
+			top: 0px;
+			left: 50%;
+			margin-left: -480px;
+		}
+		p{
+			text-align:center;
+		}
+
+		.popup{
+			width: 500px;
+			height: 300px;
+			border:1px solid #000;
+			background-color: #fff;
+			
+			/*这个技巧一定要熟练，通过固定定位，把要设置的宽或高，50%，然后margin拉回你设置的高或宽的一半像素*/
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			margin-top: -151px;
+			margin-left: -251px;
+			z-index: 999;
+		}
+
+		.popup h3{
+			background-color: gold;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 10px;
+		}
+
+		.mask{
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			background-color: #000;
+			left: 0px;
+			top: 0px;
+			opacity: 0.5;
+			z-index: 998;
+		}
+
+		.pop_con{
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<div class="menu">菜单主题</div>
+	<div class="pop_con">
+		<div class="popup">
+			<h3>弹框标题</h3>
+		</div>
+		<div class="mask"></div>
+	</div>
+	<p>网页文字</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>网页文字</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>网页文字</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>网页文字</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>网页文字</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>网页文字</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>网页文字</p>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

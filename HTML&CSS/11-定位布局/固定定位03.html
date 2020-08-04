@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>固定定位</title>
+	<!-- 关于定位：
+	使用position属性，设置项如下：
+	1、relative 生成相对定位元素，元素占据的文档流的位置保留，元素本身相对于自身为止进行偏移
+	2、absolute 生成绝对定位元素，元素脱离文档流，不占据文档流的保留位置，可以理解为漂浮在文档流上方，
+	相对于上一个设置了定位的父级元素来进行定位，如果找不到，则相对于body元素进行定位
+	3、fixed  生成一个固定定位元素，元素脱离文档流，不占据文档流的位置，可以理解为漂浮在文档流上方
+	相对于浏览器窗体进行定位
+	4、static  默认值，没有定位，元素出现在正常文档流
+	5、inherit  从父元素继承position属性的值 -->
+	<style>
+		.con{
+			width: 400px;
+			height: 400px;
+			border:1px solid #000;
+			margin:50px auto 0;
+			position:relative;
+		}
+
+		.box1,.box2{
+			width: 300px;
+			height: 100px;
+			margin:20px;
+		}
+		.box1{
+			background-color: #0ff;
+	/*		3、fixed  生成一个固定定位元素，元素脱离文档流，不占据文档流的位置，可以理解为漂浮在文档流上方
+	相对于浏览器窗体进行定位*/
+			position: fixed;
+			left: 50px;
+			top: 50px;
+		}
+
+		.box2{
+			background-color: gold;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// for(var i=0;i<2;i++){
+		// 	alert('ok!');
+		// }
+
+		// var aList01 = ['a','b','c','d','e'];
+		// var aLen = aList01.length;
+		// for(var i=0;i<aLen;i++){
+		// 	alert(aList01[i]);
+		// }
+
+		// 项目 -- 循环将数据放回到页面 (典型例子)
+		window.onload = function(){
+			var oUl = document.getElementById('list');
+			var aList = ['美人鱼', '疯狂动物城','罗小黑战记','哪吒'];
+			var iLen = aList.length;
+			var sTr = '';
+
+
+			for(var i=0;i<iLen;i++)
+			{
+				sTr += '<li>' + aList[i] + '</li>';
+			}
+			oUl.innerHTML = sTr;
+		}
+	</script>
+
+	<style>
+		.list{
+			width: 300px;
+			height: 305px;
+			list-style: none;
+			margin:50px auto;
+			padding:0px;
+
+		}
+		.list li{
+			height: 50px;
+			border-bottom: 1px dotted #000;
+			line-height: 50px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<ul class="list" id="list">
+	<!-- 	<li>美人鱼</li>
+		<li>美人鱼</li>
+		<li>美人鱼</li>
+		<li>美人鱼</li> -->
+	</ul>
+</body>
+</html>

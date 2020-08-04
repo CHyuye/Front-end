@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin塌陷</title>
+	<style>
+		body{
+			margin:0px;
+		}
+
+		/*3.使用伪元素类，建议使用此类方法！*/
+		.clearfix:before{
+			content: '';
+			display: table;
+		}
+
+		.con{
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+			/*1.外部盒子设置一个边框*/
+			/*border:1px solid #000;*/
+
+			/*2.外部盒子设置overflow：hidden*/
+			/*overflow: hidden;*/
+		}
+
+		.box{
+			width: 200px;
+			height: 100px;
+			background-color: #00ffff;
+			margin-top: 100px;
+			margin-left: 50px;
+		}
+
+	</style>
+</head>
+<body>
+	
+	<!-- margin的塌陷：在两个盒子嵌套的时候，内部的盒子设置的margin-top会加到外边的盒子
+	，导致内部的盒子margin-top设置失败。解决方法：
+	1.外部盒子设置一个边框
+	2.外部盒子设置overflow：hidden
+	3.使用伪元素类 -->
+
+	<div class="con clearfix">
+		<div class="box"></div>
+	</div>
+	
+</body>
+<!-- </html> -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<script>
+		$(function(){
+
+			//特别注意：选择器获取的多个元素，获取信息获取的是第一个，
+			// 比如：$('div').css('width'),获取到的是第一个div的width
+			var $div = $('#box');
+			// 读取div元素的css属性值
+			var sTr = $div.css('fontSize');
+			alert(sTr);
+
+			// 写属性值
+			$div.css({'color':'#0ff','backgroundColor':'lightgreen'})
+
+			/*
+			原生js无法读取行间没有定义的css属性值
+			var oDiv = document.getElementById('box');
+			alert(oDiv.style.fontSize);
+			*/
+		})
+	</script>
+</head>
+<body>
+	<div id="box" style="font-size: 30px">这是一个div元素</div>
+</body>
+</html>

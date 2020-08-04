@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+		}
+
+		.banner{
+			width: 960px;
+			height: 150px;
+			background-color: yellow;
+			margin:0 auto;
+		}
+
+		.menu{
+			width: 960px;
+			height: 80px;
+			background-color: lightgreen;
+			font:bold 24px/80px 'Micrsoft Yahei';
+			margin:0 auto;
+			text-align: center;
+		}
+
+		.menu_back{
+			width: 960px;
+			height: 80px;
+			margin:0 auto;
+		}
+
+		.totop{
+			width: 60px;
+			height: 60px;
+			background-color: gold;
+			font:bold 40px/60px 'Micrsoft Yahei';
+			text-align: center;
+			position: fixed;
+			right: 40px;
+			bottom: 40px;
+			border-radius: 50%;
+			color:white;
+			cursor: pointer;
+		}
+		p{
+			text-align: center;
+			color: red;
+		}
+	</style>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			var $menu = $('.menu');
+			var $menu_back = $('.menu_back');
+			var $totop = $('.totop');
+
+			$(window).scroll(function(){
+				var iNum = $(document).scrollTop();
+
+				if(iNum>200)
+				{
+					$menu.css({
+						'position':'fixed',
+						'left':'50%',
+						'top':'0',
+						'margin-left':'-480px',
+					})
+					$menu_back.show();
+				}
+				else
+				{
+					$menu.css({
+						'position':'static',
+						'margin-left':'auto'
+					})
+					$menu_back.hide();
+				}
+
+				if(iNum>400)
+				{
+					$totop.fadeIn();
+				}
+				else{
+					$totop.fadeOut();
+				}
+			})
+
+			$totop.click(function(){
+				$('html, body').animate({'scrollTop':'0'});
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="banner"></div>
+	<div class="menu">菜单</div>
+	<div class="menu_back"></div>
+	<div class="totop">↑</div>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+</body>
+</html>

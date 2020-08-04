@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片插入</title>
+</head>
+<body>
+	<h2>图片</h2>
+	<!-- 完整的src="./imaeg/尘文.jpg" ./表示当前路径  ../表示上一层路径-->
+	<p>相对路径插入图片，效果更好，兼容性好</p>
+	<div>
+		<p>src属性：定义图片的引用地址</p>
+		<p>alt属性：定义图片加载失败时显示的文字，搜索引擎会使用这个文字收录图片，盲人能读取</p>
+		<img src="image/1.jpg" alt="美女图片" width="200">
+		<img src="./image/尘文.jpg" alt="QQ头像" width="100">
+		<p>绝对路径插入图片，一旦改动就会出错</p>
+		<img src="E:\前端学习HTML和CSS\image/3.jpg" alt="美女图片" width="200">
+	</div>
+	<a href="html链接.html">返回</a>
+	
+</body>
+</html>

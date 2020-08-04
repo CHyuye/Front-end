@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内联块元素</title>、
+	<!-- display属性：
+	display属性用来设置元素的类型及隐藏，常用属性有：
+	1、none 元素隐藏且不占位置
+	2、block 元素以块元素显示
+	3、inline元素以内联元素显示
+	4、inline-block 元素以内联块元素显示 -->
+	<style>
+		body{
+			margin:0px;
+		}
+			
+		.box{
+			width: 400px;
+			height: 400px;
+			border:1px solid #000;
+			margin: 50px auto;
+			font-size: 0px;
+			text-align: center;
+		}
+
+		.box a{
+			/*不支持宽，高*/
+			width: 100px;
+			height: 30px;
+			background-color: gold;
+			
+			/*不支持 margin上下，padding上下*/
+			margin:20px 30px;
+			
+			padding:0 10px;
+			text-decoration: none;
+
+			/*<!-- 解决内联元素间隙的方法：
+			1、去掉内联元素之间的换行
+			2、将内联元素的父极设置font-size=0，内联元素自身在设置font-size=16px -->*/
+			font-size: 16px;
+
+			display: inline-block; /* inline-block 元素以内联块元素显示*/
+		}
+	</style>
+	
+</head>
+<body>
+	<!-- 内联块元素：也叫内块元素，我们可以用display属性将块元素或者内联元素转化成这种元素
+	他们的布局表现为：
+	1、支持全部样式
+	2、如果没有设置宽高，宽高由内容决定
+	3、盒子并排在一行
+	4、代码换行，产生间距
+	5、子元素是内联元素，父元素可以用text-align属性设置子元素的对齐方式 -->
+	<div class="box">
+		<a href="#">链接本地1</a> 
+		<a href="#">链接本地2</a>
+		<a href="#">链接本地3</a>
+		<a href="#">链接本地4</a>
+	</div>
+
+</body>
+</html>

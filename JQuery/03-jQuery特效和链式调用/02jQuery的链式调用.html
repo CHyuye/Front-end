@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-3.4.1.min.js"></script>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+
+		ul{
+			list-style: none;
+		}
+
+		.menu{
+			width: 200px;
+			margin:30px auto 0;
+		}
+		.menu .level1,.menu li ul a{
+			display: block;
+			width: 200px;
+			height: 30px;
+			line-height: 30px;
+			text-indent: 10px;
+			font-size: 20px;
+			color: #fff;
+			background-color: #3366cc;
+			text-decoration: none;
+		}
+
+		.menu .level1{
+			border-bottom: 1px solid #afc6f6;
+		}
+
+		.menu li ul a{
+			font-size: 14px;
+			text-indent: 20px;
+			background-color: #7aa1ef;
+
+		}
+
+		.menu li ul li{
+			border-bottom: 1px solid #afc6f6;
+		}
+
+		.menu li ul{
+			display: none;
+		}
+
+		.menu li ul.current{
+			display: block;
+		}
+
+		.menu li ul li a:hover{
+			background-color: #f6b544;
+		}
+	</style>
+	<script>
+		// JQuery对象的方法会在执行完后返回这个jQuery对象，所有jQuery对象的方法可以连起来写
+		$(function(){
+			$('.level1').click(function(){
+				//这个点击当前.level1元素的紧挨的同辈元素，向下展开，然再跳到父级元素（li），再跳到父级元素的元素的其他的同辈元素（li）选择其他同辈元素（li）下面的子级元素（ul），然后将他们卷起来
+				// $(this).next().slideDown().parent().siblings().children('ul').slideUp();
+
+				//修正反复点击持续动画的bug —— 加stop()
+				$(this).next().stop().slideToggle().parent().siblings().children('ul').slideUp();
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<ul class="menu">
+		<li>
+			<a href="#" class="level1">水果</a>
+			<ul class="current">
+				<li><a href="">苹果</a></li>
+				<li><a href="">梨子</a></li>
+				<li><a href="">葡萄</a></li>
+				<li><a href="">橘子</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">海鲜</a>
+			<ul>
+				<li><a href="">苹果</a></li>
+				<li><a href="">梨子</a></li>
+				<li><a href="">葡萄</a></li>
+				<li><a href="">橘子</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">肉类</a>
+			<ul>
+				<li><a href="">苹果</a></li>
+				<li><a href="">梨子</a></li>
+				<li><a href="">葡萄</a></li>
+				<li><a href="">橘子</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">肉类</a>
+			<ul>
+				<li><a href="">苹果</a></li>
+				<li><a href="">梨子</a></li>
+				<li><a href="">葡萄</a></li>
+				<li><a href="">橘子</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="level1">肉类</a>
+			<ul>
+				<li><a href="">苹果</a></li>
+				<li><a href="">梨子</a></li>
+				<li><a href="">葡萄</a></li>
+				<li><a href="">橘子</a></li>
+			</ul>
+		</li>
+	</ul>
+
+</body>
+</html>

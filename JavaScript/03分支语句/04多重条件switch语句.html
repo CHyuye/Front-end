@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			var iWeek = 2;
+			var oBody = document.getElementById('body01');
+
+			// if(iWeek==1){
+			// 	oBody.style.backgroundColor = 'gold';
+			// }
+			// else if(iWeek==2){
+			// 	oBody.style.backgroundColor = '#0ff';
+			// }
+			// else if(iWeek==3){
+			// 	oBody.style.backgroundColor = 'pink';
+			// }
+			// else if(iWeek==4){
+			// 	oBody.style.backgroundColor = 'yellow';
+			// }
+			// else if(iWeek==5){
+			// 	oBody.style.backgroundColor = 'red';
+			// }
+
+			// switch语句性能可能更高一点，但不常用
+			switch (iWeek){
+
+				case 1:
+					oBody.style.backgroundColor = 'gold';
+					break;
+				case 2:
+					oBody.style.backgroundColor = "#0cf";
+					break;
+				case 3:
+					oBody.style.backgroundColor = "pink";
+					break;
+				default:
+					oBody.style.backgroundColor = "lightyellow";
+			}
+
+		}
+	</script>
+</head>
+<body id="body01">
+	
+</body>
+</html>

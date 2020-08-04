@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		div[class*='col-']{
+			height: 50px;
+			background-color: #0ff;
+			border:1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>栅格系统响应式布局</h1>
+	</div>
+	<div class="container">
+		<div class="row">
+			<!-- hidden-md --小于992,隐藏
+			hidden-sm --小于768，隐藏
+			hidden-xs --小于最小，隐藏 -->
+			<div class="col-lg-3 col-md-4 col-sm-6">隐藏一</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">隐藏二</div>
+			<div class="col-lg-3 col-md-4 col-sm-6">隐藏三</div>
+			<!-- 大于1200排一行，小于992排四个一个挤下去了，隐藏小于992的那块，小于768排两行，隐藏最小时的最后一块 -->
+			<div class="col-lg-3 col-md-4 hidden-md col-sm-6 hidden-xs">隐藏四</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class="container">
+		<div class="row">
+		<div class="bs-example" data-example-id="hoverable-table">
+	    <table class="table table-hover">
+	      <thead>
+	        <tr>
+	          <th>#</th>
+	          <th>First Name</th>
+	          <th>Last Name</th>
+	          <th>Username</th>
+	        </tr>
+	      </thead>
+	      <tbody>
+	        <tr>
+	          <th scope="row">1</th>
+	          <td>Mark</td>
+	          <td>Otto</td>
+	          <td>@mdo</td>
+	        </tr>
+	        <tr>
+	          <th scope="row">2</th>
+	          <td>Jacob</td>
+	          <td>Thornton</td>
+	          <td>@fat</td>
+	        </tr>
+	        <tr>
+	          <th scope="row">3</th>
+	          <td>Larry</td>
+	          <td>the Bird</td>
+	          <td>@twitter</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  </div>
+	</div>
+	</div>
+</body>
+</html>

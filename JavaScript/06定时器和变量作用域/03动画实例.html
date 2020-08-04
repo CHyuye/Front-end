@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			var oDiv1 = document.getElementById('div1');
+			var oDiv2 = document.getElementById('div2');
+			var iLeft = 0;
+			var iLeft2 = 120;
+
+			var timer = setInterval(moving, 30);
+
+			function moving()
+			{
+				iLeft += 3;
+				oDiv1.style.left = iLeft + 'px';
+				if(iLeft>700){
+					clearInterval(timer);
+				}
+			}
+
+			var timer2 = setInterval(function(){
+				iLeft2 += 3;
+				oDiv2.style.left = iLeft2 + 'px';
+				if(iLeft2>800){
+					clearInterval(timer2);
+				}
+			},30);
+		}
+	</script>
+	<style>
+		.box1, .box2{
+			width: 100px;
+			height: 100px;
+		}
+		.box1{
+			background-color: lightgreen;
+			position: absolute;
+			left: 0;
+			top:150px;
+		}
+
+		.box2{
+			background-color: #0ff;
+			position: absolute;
+			left: 150px;
+			top: 150px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box1" id="div1"></div>
+	<div class="box2" id="div2"></div>
+</body>
+</html>

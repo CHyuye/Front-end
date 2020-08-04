@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		//resize() 检测浏览器窗口大小发生改变
+		$(window).resize(function(){
+
+			var $W = $(window).width();
+			var $H = $(window).height();
+
+			document.title = $W + $H;
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

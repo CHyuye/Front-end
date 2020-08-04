@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			var $li = $('.list li');
+			var $ul = $('.list');
+
+			$ul.css({'listStyle':'none'});
+
+			// 有时候需要获得匹配元素相对于其同胞元素的索引位置，此时可以用index()方法
+			//alert($li.eq(3).index()); // 弹出3
+
+			alert($li.filter('.myli').index());
+
+		})
+	</script>
+</head>
+<body>
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li class="myli">4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</body>
+</html>

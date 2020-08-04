@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box1,.box2,.box3,.box4{
+			width:200px;
+			height: 200px;
+			float: left;
+			background-color: gold;
+			margin:30px;
+			border:3px solid #000;
+			transition: all 500ms ease;
+		}
+		.box1{
+			transform-origin:left center;
+		}
+		.box2{
+			transform-origin: left top;
+		}
+		.box3{
+			transform-origin: right bottom;
+		}
+
+		.box4{
+			transform-origin: 50px 50px;
+		}
+
+		.box1:hover, .box2:hover, .box3:hover,.box4:hover{
+			transform: rotate(45deg);
+		}
+
+	</style>
+</head>
+<body>
+	<!-- transform变换
+	1.transslate(x,y) 设置盒子位移
+	2.scale(x,y) 设置盒子缩放
+	3.rotate(deg) 设置盒子旋转
+	4.skew(X-angle,Y-angle) 设置盒子斜切
+	5.perspective 设置透视距离
+	6.transform-style flat | preserve-3d 设置盒子是否按照3d空间显示
+	7.translateX，translateY，translateZ 设置三维移动
+	8.rotateX，rotateY，rotateZ 设置三维旋转
+	9.tranfrom-origin 设置变形的中心店
+	10.backface-visibility 设置盒子背面是否可见 -->
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div class="box3"></div>
+	<div class="box4"></div>
+</body>
+</html>

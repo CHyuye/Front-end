@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		div[class*='col-']{
+			background-color: #0ff;
+			border:1px solid #ccc;
+		}
+		.box{
+			background-color: yellow;
+			height: 200px;
+			max-width: 245px;
+			border:1px solid red;
+			margin:15px auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>栅格系统响应式布局</h1>
+	</div>
+	<div class="container">
+		<div class="row">
+			<!-- 在类属性上叠加属性，大于1200排一行，大于992排一行，小于768排两行 -->
+			<div class="col-lg-3 col-md-3 col-sm-6"><div class="box"></div></div>
+			<div class="col-lg-3 col-md-3 col-sm-6"><div class="box"></div></div>
+			<div class="col-lg-3 col-md-3 col-sm-6"><div class="box"></div></div>
+			<div class="col-lg-3 col-md-3 col-sm-6"><div class="box"></div></div>
+		</div>
+	</div>
+</body>
+</html>

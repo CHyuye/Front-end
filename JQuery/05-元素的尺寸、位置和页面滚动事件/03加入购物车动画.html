@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			var $chart = $('.chart');
+			var $count = $('.chart em')
+			var $btn = $('#btn');
+			var $point = $('.point');
+
+			var $W01 = $btn.outerWidth();
+			var $H01 = $btn.outerHeight();
+
+			var $W02 = $chart.outerWidth();
+			var $H02 = $chart.outerHeight();
+
+
+			$btn.click(function(){
+				var oPos01 = $btn.offset();
+				var oPos02 = $chart.offset();
+
+				$point.css({'left':oPos01.left+parseInt($W01/2)-10,'top':oPos01.top+parseInt($H01/2)-10});
+				$point.show();
+
+				$point.stop().animate({'left':oPos02.left+parseInt($W02/2)-10,'top':oPos02.top+parseInt($H02/2)-10},500,function(){
+					//隐藏
+					$point.hide();
+
+					//把count的数值加一
+					var iNum = $count.html();
+					$count.html(parseInt(iNum)+1);
+				});
+
+			})
+
+		})
+	</script>
+
+	<style>
+		.chart{
+			width: 150px;
+			height: 50px;
+			border:2px solid #0ff;
+			margin-top: 50px;
+			margin-right: 100px;
+			font-size: 20px;
+			line-height: 50px;
+			float: right;
+			text-align: center;
+			background-color: gold;
+			color: white;
+		}
+
+		.chart em{
+			color: red;
+			font-style: normal;
+			font-weight: bold;
+		}
+
+		#btn{
+			width: 100px;
+			height: 50px;
+			background-color: gold;
+			color: white;
+			float: left;
+			margin-top: 300px;
+			margin-left: 50px;
+			outline: none;
+		}
+
+		.point{
+			width: 20px;
+			height: 20px;
+			background-color: red;
+			position: fixed;
+			left: 0;
+			top: 0;
+			display: none;
+			z-index: 999;
+			border-radius: 50%;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="chart">购物车<em>0</em></div>
+	<input type="button" value="加入购物车" id="btn">
+	<div class="point"></div>
+</body>
+</html>

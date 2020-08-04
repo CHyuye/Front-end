@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<style>
+		.slidebar_con{
+			width: 650px;
+			height: 32px;
+			margin:50px auto;
+		}
+		.slidebar{
+			width: 600px;
+			height: 30px;
+			border:1px solid #000;
+			float: left;
+			position: relative;
+		}
+		/*阴影块*/
+		.progress{
+			position: absolute;
+			left: 0;
+			top:0;
+			background-color: #f0f0f0;
+			width: 0px;
+			height: 30px;
+		}
+		/*滑动块*/
+		.dragbar{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 30px;
+			height: 30px;
+			background-color: gold;
+			cursor: pointer;
+			border-radius: 50%;
+		}
+		/*数字显示块*/
+		.slide_count{
+			padding:0;
+			float: right;
+			width: 40px;
+			height: 30px;
+			font-size: 16px;
+			color: #ccc;
+			border:1px solid #ccc;
+			text-align: center;
+		}
+
+	</style>
+	<script>
+		$(function(){
+			$('.dragbar').draggable({
+				//限制横向范围
+				axis:'x',
+				containment:'parent',
+				opacity:0.6,
+
+				drag:function(ev,ui){
+					//console.log(ui.position.left);
+
+					//获取拖动的距离					
+					var nowleft = ui.position.left;
+					$('.progress').css({width:nowleft});
+					$('.slide_count').val(parseInt(nowleft*100/570));
+				}
+				// drag:function(ev,ui){
+				// 	var nowleft = ui.position.left;
+				// 	$('.progress').css({width:nowleft});
+				// 	$('.slide_count').val(parsetInt(nowleft*100/570));
+				// }
+
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="slidebar_con">
+		<div class="slidebar">
+			<div class="progress"></div>
+			<div class="dragbar"></div>
+		</div>
+		<input type="text" class="slide_count" value="0">
+	</div>
+</body>
+</html>

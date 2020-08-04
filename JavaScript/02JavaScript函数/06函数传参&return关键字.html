@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+
+			// var oBtn = document.getElementById('btn01');
+			// oBtn.onclick = fnChangeStyle;
+
+			/*
+			function fnChangeStyle(mystyle, val){
+				var oDiv = document.getElementById('div1');
+				oDiv.style[mystyle] = val;
+			}
+			fnChangeStyle('color', 'pink');
+			fnChangeStyle('fontSize', '24px');
+			fnChangeStyle('backgroundColor','#f80');
+			*/
+
+			//函数'return'关键字：
+			// 1.返回函数执行的结果
+			// 2.结束函数的运行
+			// 3.阻止默认行为
+			function fnAdd(a, b){
+				var c = a + b;
+				// alert("内部的c=" + c);
+
+				// 2.结束函数的运行
+				return c;
+
+				alert("内部的c=" + c);
+			}
+
+			var iRet = fnAdd(3,5);
+			// 1.返回函数执行的结果
+			alert(iRet);
+		}
+	</script>
+</head>
+<body>
+	<!-- <div id="div1">这是一个div元素</div> -->
+	<!-- <input type="button" value="改变" id="btn01"> -->
+	
+</body>
+</html>

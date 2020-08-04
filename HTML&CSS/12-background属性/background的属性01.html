@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		
+		.box{
+			width: 400px;
+			height: 200px;
+			border:2px solid #000;
+			margin:50px auto 0px;
+
+			/*设置背景颜色*/
+			background-color: cyan;
+
+			/*设置图片背景地址*/
+			background-image: url(../image/传智logo.jpg);
+			/*设置图片如何平铺*/
+			/*background-repeat: repeat;  /*缺省值，平铺所有的
+			background-repeat: repeat-x;  /*只平铺x轴方向的*/
+			/*background-repeat: repeat-y;  /*只平铺y轴方向的*/
+			background-repeat: no-repeat;
+			/*
+				水平方向：left  center right
+				垂直方向：top center bottom
+			 */
+			/*设置背景图片的位置参数，可以是上面的，也可以是给定像素*/
+			background-position: 30px 30px;
+
+			/*当然也可以简写*/
+			/*background:url(../image/传智logo.jpg) no-repeat cyan 30px 30px;*/
+
+			position: relative;
+		}
+		.box h4{
+			position: absolute;
+			left: 200px;
+			top: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<!-- 	<h4>头像</h4> -->
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		//预解析会让变量的声明提前，但定义不提前
+		alert(iNum);  //结果：弹出窗口 undefined
+
+		var iNum = "12";
+
+		//使用一个根本未定义的变量，程序会报错！
+		// alert(iNum2);
+
+		//预解析会让函数的声明和定义都提前。程序没毛病
+		myAlert();
+
+		function myAlert(){
+			alert("Hello World!")
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

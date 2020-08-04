@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script>
+		// jQuery选择器可以快速选择元素，选择规则和css样式相同，使用length属性可以判断是否成功
+		$(function(){
+			var $div1 = $('#div1');  //选择id为div1的元素
+			var $div2 = $('.div');  // 选择class为div的元素
+			var $list = $('.list li');  //选择class为list 下面的li元素
+
+			$div1.css({'color':'red'});
+			$div2.css({'color':'#f80'});
+			//使用标签的css方法可以不用注意驼峰命名
+			// $list.css({'backgroundColor':'pink'});
+			$list.css({'background-color':'pink','list-style':'none'});
+		});
+	</script>
+</head>
+<body>
+	<div id="div1">这是第一个div元素</div>
+	<div class="div">这是第二个div元素</div>
+
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+</body>
+</html>

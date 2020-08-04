@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时钟</title>
+	<script>
+		window.onload = function(){
+			// 定义fnTimego函数，让整体都能反复运行
+			function fnTimego(){
+				var oDiv = document.getElementById('div1');
+
+				//一定要整体先获取一下全部时间
+				var sNow = new Date();
+				//alert(sNow);
+				var iYear = sNow.getFullYear();
+				//alert(iYear);
+
+				//获取月份，月份是从0-11
+				var iMonth = sNow.getMonth() + 1;
+
+				var iDate = sNow.getDate();
+				//星期是从0-6
+				var iWeek = sNow.getDay();
+				//alert(iWeek);
+
+				var iHour = sNow.getHours();
+
+				var iMinute = sNow.getMinutes();
+
+				var iSecond = sNow.getSeconds();
+
+				var sTr = '当前时间是：' + iYear +'年' + iMonth + '月' + iDate + '日 '+'  ' +fnTodou(iHour) + ':' + fnTodou(iMinute) + ':' + fnTodou(iSecond);
+
+				oDiv.innerHTML = sTr;
+				}
+			// 解除刚开始运行时产生的1秒钟空白问题
+			fnTimego();
+			// 让时间反复运行，1s为一次
+			setInterval(fnTimego, 1000);
+
+			// 星期的函数，不知道为什么不支持，疑问
+			// function fnToweek(n){
+			// 	if(n==0){
+			// 		return '星期日'；
+			// 	}
+			// 	else if(n==1){
+			// 		return '星期一'；
+			// 	}
+			// 	else if(n==2){
+			// 		return '星期二';
+			// 	}
+			// 	else if(n==3){
+			// 		return '星期三';
+			// 	}
+			// 	else if(n==4){
+			// 		return '星期四'；
+			// 	}
+			// 	else if(n==5){
+			// 		return '星期五'；
+			// 	}
+			// 	else{
+			// 		return '星期六'；
+			// 	}
+			//}
+
+			// 这个函数是为了解决时分秒，在小于10时，前面加上一个0，好看
+			function fnTodou(n){
+				if(n<10)
+				{
+					return '0' + n;
+				}
+				else
+				{
+					return n;
+				}
+			}
+
+		}
+	</script>
+
+	<style>
+		.box{
+			font-size: 20px;
+			color: lightgreen;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box" id="div1"></div>
+</body>
+</html>

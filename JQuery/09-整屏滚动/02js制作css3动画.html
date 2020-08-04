@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: gold;
+			transition: all 1s ease;
+			margin:50px auto 0;
+		}
+		.moving{
+			transform: rotate(135deg);
+		}
+	</style>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/jquery.mousewheel.js"></script>
+	<script>
+		$(function(){
+			$('#btn').click(function(){
+				$('.box').addClass('moving');
+			})
+		})
+	</script>
+</head>
+<body>
+	<input type="button" value="动画" id="btn">
+	<div class="box"></div>
+</body>
+</html>

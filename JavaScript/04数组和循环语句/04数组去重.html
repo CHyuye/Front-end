@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		var aList = [1,2,3,4,5,6,7,8,2,3,5,6,9,4,0,9];
+		var aLen = aList.length;
+		var aList2 = [];
+
+		for(var i=0;i<aLen;i++)
+		{
+			if(aList.indexOf(aList[i]) == i){
+				aList2.push(aList[i]);
+			}
+		}
+		alert(aList2);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

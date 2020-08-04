@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+				//一般不这么用
+				// $('#ipt1').focus(function(){
+				// 	console.log('获得焦点');
+				// })
+
+				//1.focus() 元素获取到焦点时触发
+				//用来input元素开始便得到焦点，只能是一个元素获得焦点，第二个获取的就在第二个上
+				$('#ipt1').focus();
+
+				//2.blur() 元素失去焦点是触发
+				$('#ipt1').blur(function(){
+					// 使用当前元素，获取它的value值 用val()
+					var sVal = $(this).val();
+					console.log(sVal);
+				})
+
+				$('#form01').submit(function(){
+					// alert('提交');
+
+					//阻止默认的提交行为
+					return false;
+
+				})
+		})
+		
+
+
+	</script>
+</head>
+<body>
+	<form action="http://www.baidu.com" id="form01">
+		<input type="text" name="date01" id="ipt1">
+		<input type="text" name="date02" id="ipt2">
+		<input type="submit" value="提交" id="sub">
+	</form>
+</body>
+</html>

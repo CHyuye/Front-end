@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		/*pc及移动端页面适配方法：
+		1.全适配：响应式布局 + 流体布局
+		2.移动端适配：
+			·流体布局 + 少量响应式
+			·基于rem的布局*/
+		body{
+			margin:0;
+		}
+		
+		/*流体布局：
+		就是使用百分比来设置元素的宽度，元素的高度按实际高度写固定值，
+		因为流体布局的边线无法用百分比，所以要使用以下两种方法*/
+		.con a{
+			display: block;
+			/*
+			第一种方法： 通过计算的方式给元素加尺寸
+			width:calc(25% - 2px);
+			*/
+			width: 25%;
+			height: 100px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 14px;
+			color: #333;
+			line-height:100px; 
+			float: left;
+			background-color: gold;
+			border:1px solid #000;
+			
+			/*第二种方法*/
+			box-sizing: border-box;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<a href="#">菜单文字</a>
+		<a href="#">菜单文字</a>
+		<a href="#">菜单文字</a>
+		<a href="#">菜单文字</a>
+	</div>
+</body>
+</html>

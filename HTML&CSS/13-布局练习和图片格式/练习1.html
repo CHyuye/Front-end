@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 特征布局：翻页（所需知识点：盒模块，内联元素） -->
+	<style>
+		.pagenation{
+			width: 600px;
+			height: 40px;
+			list-style: none;
+			margin:50px auto 0;
+			border:1px solid gold;
+			text-align: center;
+			font-size: 0px;
+		}
+		.pagenation li{
+			height: 26px;
+			font-size: 12px;
+			/*background-color: gold;*/
+			line-height: 26px;
+			margin:7px 5px 0;
+			display: inline-block;
+
+		}
+
+		
+
+		.pagenation li a{
+			background-color: gold;
+			font:normal 12px/26px 'Microsoft Yahei';
+			color:#000;
+			display: block;
+			/*height: 26px;*/
+			padding:0 10px;
+
+			text-decoration: none;
+		}
+		.pagenation li a:hover{
+			background-color: gold;
+			color: red;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="pagenation">
+		<li><a href="#">上一页</a></li>
+		<li><a href="#">2</a></li>
+		<li><a href="#">3</a></li>
+		<li><a href="#">4</a></li>
+		<li><a href="#">5</a></li>
+		<li><span>...</span></li>
+		<li><a href="#">11</a></li>
+		<li><a href="#">12</a></li>
+		<li><a href="#">13</a></li>
+		<li><a href="#">14</a></li>
+		<li><a href="#">下一页</a></li>
+	</ul>
+	
+</body>
+</html>

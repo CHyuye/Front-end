@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script>
+		/*
+		1.本地存储cookie方式
+		cookie存储在本地，容量最大是4k，在同源的http请求时携带传递，损耗带宽，可设置访问路径，只有此路径及此路径下的子路径才能访问cookie，在设置的过期时间之前有效
+		*/
+		// 设置cookie过期时间为7天，存在网站目录下
+		//$.cookie('mycookie','ok!',{expries:7,path:'/'});
+
+		//读取cookie
+		var mycookie = $.cookie('mycookie');
+		alert(mycookie);
+
+	</script>
+</head>
+<body>
+	<h1>测试页面</h1>
+</body>
+</html>

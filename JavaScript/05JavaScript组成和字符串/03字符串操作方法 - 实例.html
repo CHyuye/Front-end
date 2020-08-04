@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+		字符串的处理方法
+		1.字符串合并操作 " + "
+		2.parseInt() 将数字字符串转化为整数
+		3.parseFloat() 将数字字符串转化为小数
+		4.split() 把一个字符串分隔成字符串组成的数组
+		5.charAt() 获取字符串中的某一个字符
+		6.indexOf() 查找字符串是否含有某个字符
+		7.substring() 截取字符串 用法： substring(start, end) （不包含end）
+		8.toUpperCase() 字符串转大写
+		9.toLowerCase() 字符串转小写
+		*/
+
+		var iNum = 3;
+		var iNum02 = '45';
+		var sTr = 'abc';
+
+		// 数字与字符串直接拼接
+		//alert(iNum+iNum02);  // 345
+		//alert(iNum+iNum02+sTr);  // 345abc
+
+		var sTr01 = '12.34';
+		//2.parseInt() 将数字字符串转化为整数
+		//alert(parseInt(sTr01));  //弹出 12
+		//3.parseFloat() 将数字字符串转化为小数
+		//alert(parseFloat(sTr01)); //弹出 12.34
+
+		var sTr02 = '2019-10-31';
+		//4.split() 把一个字符串分隔成字符串组成的数组
+		// var aRr = sTr02.split('-')  // 按'-'切割
+		// alert(aRr);
+
+		// var aRr01 = sTr02.split('')  // 每个都切割 [2,0,1,9,-,1,0,-,3,1]
+		// alert(aRr01);
+
+		//5.charAt() 获取字符串中的某一个字符
+		var sTr03 = '#div01';
+		var bRr = sTr03.charAt(0);
+		//alert(bRr);  //弹出 #
+
+		//6.indexOf() 查找字符串是否含有某个字符 -- 可以检测某个单词是否存在，存在返回的值大于0，-1表示不存在
+		var sTr04 = 'aovna xieyu ajcinew';
+		var cRr = sTr04.indexOf('xieyu');
+		//alert(cRr);  // 存在，弹出索引位置
+
+		var cRr2 = sTr04.indexOf('chenhan');
+		//alert(cRr2); //不存在 弹出-1
+
+		//7.substring() 截取字符串 用法： substring(start, end) （不包含end）
+		var sTr05 = 'abcdefg102511';
+		var dRr = sTr05.substring(7,11); // substring(start, end) start值要正好等于开始切的值，end值要大于最后切到的值
+		//alert(dRr);
+		var dRr2 = sTr05.substring(7); // 从索引值7开始切刀最后
+		//alert(dRr2);
+
+		//8.toUpperCase() 字符串转大写
+		var sTr06 = 'abcdef';
+		var eRr = sTr06.toUpperCase();
+		alert(eRr);
+
+		//9.toLowerCase() 字符串转小写
+		var eRr2 = sTr06.toLowerCase();
+		alert(eRr2);
+
+		// 结合前面的方法 —— 字符串反转
+		var sTr07 = 'abcdef10251314kxkl0319';
+		var fRr = sTr07.split('').reverse().join('');
+		alert(fRr);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

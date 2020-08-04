@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<style>
+		.box{
+			width: 400px;
+			height: 400px;
+			background-color: lightgreen;
+			border:2px solid #0ff;
+			margin:50px auto 0;
+		}
+	</style>
+	<script>
+		$(function(){
+			var $div = $('.box');
+
+			$div.click(function(){
+
+				//offset()方法 —— 获取元素相对页面的绝对位置
+				var oPos = $div.offset();
+				document.title = parseInt(oPos.left) + '|' + parseInt(oPos.top);
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

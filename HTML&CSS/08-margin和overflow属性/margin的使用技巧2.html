@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>margin</title>
+	<style>
+		
+		/*页面body的一个坑，因为body也有间距所以导致页面布局不能贴边*/
+		body{
+			margin: 0px;
+		}
+
+		/*.box{
+			width:200px;
+			height: 200px;
+			background-color: gold;
+			margin-left: -20px;
+		}*/
+
+		.box{
+			width:202px;
+			height: 156px;
+			background-color: pink;
+			margin:50px auto 0px;
+		}
+
+		.box div{
+			width: 200px;
+			height: 30px;
+			background-color: gold;
+			border:1px solid green;
+
+			/*margin的第二个技巧：让margin值为负值，撑开，让div的边线不重叠*/
+			margin-top:-1px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	
+</body>
+</html>

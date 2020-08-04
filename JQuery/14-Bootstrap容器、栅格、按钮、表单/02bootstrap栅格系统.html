@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<!-- 引入bootstrap框架需要三个文件，css，js，fonts -->
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		/*选中div元素带col-的*/
+		div[class*='col-']{
+			height: 40px;
+			background-color: #0ff;
+			border:1px solid gold;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- 栅格系统：将页面横向分为12等分，按照12等分定义了适应不同的宽度等分的样式类
+	这些样式类组成一套响应式，移动设备优先的流式栅格系统
+	1.col-lg- 大于1200排成一行，小于1200分别占一行
+	2.col-md- 大于992排成一行，小于992分别占一行
+	3.col-sm- dayu768排成一行，小于768分别占一行
+	4.col-xs- 始终排成一行 -->
+	<div class="container">
+		<h1>栅格系统</h1>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">col-lg-3</div>
+			<div class="col-lg-3">col-lg-3</div>
+			<div class="col-lg-3">col-lg-3</div>
+			<div class="col-lg-3">col-lg-3</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-md-4">col-md-4</div>
+			<div class="col-md-4">col-md-4</div>
+			<div class="col-md-4">col-md-4</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-sm-3">col-md-3</div>
+			<div class="col-sm-3">col-md-3</div>
+			<div class="col-sm-3">col-md-3</div>
+			<div class="col-sm-3">col-sm-3</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row">
+			<div class="col-xs-4">col-xs-4</div>
+			<div class="col-xs-4">col-xs-4</div>
+			<div class="col-xs-4">col-xs-4</div>
+		</div>
+		<br>
+		<br>
+		<br>
+	</div>
+</body>
+</html>

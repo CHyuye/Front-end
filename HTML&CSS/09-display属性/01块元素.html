@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>块元素</title>
+	<style>
+		body{
+			margin:0px;
+		}
+		.box{
+			width: 300px;
+			height: 200px;
+			margin:50px auto;
+			border:1px solid #000;
+		}
+		.class1{
+			/*width: 100px;*/
+			height: 50px;
+			background-color: gold;
+		}
+
+		.class2{
+			width: 100px;
+			height: 100px;
+			background-color: gold;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+<!-- 	块元素：也称为行内元素。常用标签为div，p，ul，li，h1-h6，dl，dd，dt
+	他们的布局特点为：
+	1、支持全部的样式
+	2、如果没有设置宽度，默认的宽度为父极宽度100%
+	3、盒子占据一行，即使设置了宽度 -->
+	<div class="box">
+		<div class="class1">class1</div>
+		<div class="class2">class2</div>
+	</div>
+</body>
+</html>

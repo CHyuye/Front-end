@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+		变量作用域—— 变量作用的范围
+		全局变量：在函数之外定义的变量，为整个页面公用，函数内部和外部都可访问
+		局部变量：在函数内定义的变量，只能在函数内部访问，外部无法访问
+		*/
+		//定义一个全局变量
+		var iNum01 = 12;
+		// 后定义的全局变量会覆盖前面定义的
+		//var iNum01 = 14;
+
+		function myalert(){
+			var iNum02 = 22;
+
+			//函数内使用全局变量
+			alert(iNum01); //弹出 12
+		}
+
+		//外部访问不到函数内函数
+		//alert(iNum02);  //出错！
+		myalert(); //弹出22
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

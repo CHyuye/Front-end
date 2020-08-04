@@ -1,0 +1,284 @@
+/*一种让页面占满全屏的方式*/
+.main_wrap{
+	position: absolute;
+	top:0.0rem;
+	right: 0.0rem;
+	bottom: 0.0rem;
+	left: 0.0rem;
+}
+
+
+/*头部样式*/
+.header{
+	height: 2.5rem;
+	background-color: #37ab40;
+	position: relative;
+}
+
+.logo{
+	display: block;
+	width: 4.45rem;
+	height: 1.8rem;
+	margin:0.35rem auto 0;
+}
+
+.logo img{
+	width: 100%;
+}
+
+.search{
+	position: absolute;
+	width: 1.35rem;
+	height: 1.35rem;
+	top:0.6rem;
+	right: 0.75rem;
+	background: url(../images/icons.jpg) -0.35rem -0.23rem no-repeat;
+	background-size: 3rem 30rem;
+}
+
+
+/*中间滚动区域样式*/
+.center_con{
+	position: absolute;
+	top:2.5rem;
+	right: 0.0rem;
+	bottom: 2.5rem;
+	left: 0px;
+	background-color: #efefef;
+
+	/*只允许出现横向滚动条*/
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.slide{
+	height: 7.0rem;
+}
+
+.slide img{
+	width: 100%;
+}
+
+
+.menu_con{
+/*	position: absolute;
+	top:7rem;
+	left: 0;*/
+	height: 9.25rem;
+	background-color: #fff;
+	margin-top: 0.5rem;
+}
+
+.menu_con ul{
+	width: 18rem;
+	height:8.375rem;
+	margin:0.875rem 0px 0px 2rem;
+}
+
+.menu_con li{
+	width:2.5rem;
+	height: 4.0rem;
+	float: left;
+	margin-right: 1.6rem;
+}
+
+.menu_con li a{
+	display: block;
+	height: 2.25rem;
+	background: url(../images/icons.jpg) -0.38rem -2rem no-repeat;
+	background-size: 3rem 30rem;
+}
+
+.menu_con li h2{
+	font:bold 13px/1.25rem "Microsoft Yahei";
+	text-align: center;
+	color: #666;
+}
+
+/*.menu_con li:nth-child(2) a{
+	给li标签里面的a标签添加背景的方式
+}*/
+.menu_con .icon2{
+	background: url(../images/icons.jpg) -0.38rem -4.15rem  no-repeat;
+	background-size: 3rem 30rem;   /*可以省略*/
+}
+.menu_con .icon3{
+	background: url(../images/icons.jpg) -0.38rem -6.35rem no-repeat;
+	background-size: 3rem 30rem;
+}
+.menu_con .icon4{
+	background: url(../images/icons.jpg) -0.35rem -8.5rem no-repeat;
+	background-size: 3rem 30rem;
+}
+.menu_con .icon5{
+	background: url(../images/icons.jpg) -0.32rem -17.19rem no-repeat;
+	background-size: 3rem 30rem;
+}
+.menu_con .icon6{
+	background: url(../images/icons.jpg) -0.35rem -15rem no-repeat;
+	background-size: 3rem 30rem;
+}
+.menu_con .icon7{
+	background: url(../images/icons.jpg) -0.35rem -12.95rem no-repeat;
+	background-size: 3rem 30rem;
+}
+.menu_con .icon8{
+	background: url(../images/icons.jpg) -0.35rem -10.65rem no-repeat;
+	background-size: 3rem 30rem;
+}
+
+
+.common_model{
+	height: 17.25rem;
+	margin-top: 0.5rem;
+	background-color: #fff;
+}
+.common_title{
+	width: 17.75rem;
+	height: 0.9rem;
+	margin:0.8rem auto 0;
+
+}
+
+.common_title h3{
+	font:bold 15px/0.9rem "Microsoft Yahei";
+	color:#fbc83d;
+	float: left;
+	border-left: 0.25rem solid #fbc83d;
+	text-indent: 0.4rem;
+}
+
+.common_title a{
+	float: right;
+	font:normal 12px/0.9rem "Microsoft Yahei";
+	color: #7f7f7f;
+}
+
+.common_model .banner{
+	display: block;
+	width: 17.75rem;
+	height: 4.5rem;
+	margin:0.5rem auto 0;
+}
+
+.banner img{
+	width: 100%;
+}
+
+.goods_list{
+	width:17.75rem;
+	height: 9.325rem;
+	margin: 0.5rem auto 0;
+}
+
+.goods_list li{
+	width: 5.9rem;
+	height: 9.325rem;
+	border:1px solid #e7e7e7;
+	float: left;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.goods_list li:last-child{
+	border-right: 0px;
+}
+
+.goods_link{
+	display: block;
+	width: 4.5rem;
+	height: 4.5rem;
+	margin:0.375rem auto 0;
+}
+
+.goods_link img{
+	width:100%;
+}
+
+.goods_list h4{
+	width: 5.0rem;
+	font:normal 15px/15px "Microsoft Yahei";
+	margin:0.925rem auto 0;
+
+	overflow: hidden;
+	/*强制文字不换行*/
+	white-space: nowrap;
+	/*超出部分显示省略号*/
+	text-overflow: ellipsis;
+}
+
+.unit{
+	width: 5.0rem;
+	font:normal 12px/12px "Microsoft Yahei";
+	color: #666;
+	margin:0.8rem auto 0;
+}
+
+.price{
+	width: 5.0rem;
+	font:normal 12px/12px "Microsoft Yahei";
+	margin:0.5rem auto 0;
+	color: #f40;
+}
+
+.add_chart{
+	position: absolute;
+	width: 1.7rem;
+	height: 1.7rem;
+	background:url(../images/icons.jpg) left -19.5rem no-repeat;
+	background-size: 3rem 30rem;
+	right: 0.675rem;
+	bottom:0;
+}
+
+.empty{
+	height: 0.5rem;
+	width: 100%;
+	background-color: white;
+}
+
+/*底部样式*/
+.footer{
+	position: absolute;
+	left: 0.0rem;
+	bottom: 0.0rem;
+	width: 100%;
+	height: 2.5rem;
+	background-color: #efefef;
+}
+
+.footer li{
+	width: 25%;
+	height: 2.5rem;
+	float: left;
+}
+
+.footer li a{
+	display: block;
+	width: 1.1rem;
+	height: 1.1rem;
+	margin:0.35rem auto 0;
+	background: url(../images/icons.jpg) -0.35rem -21.7rem no-repeat;
+	background-size: 3rem 30rem;
+}
+
+.footer li:nth-child(2) a{
+	background: url(../images/icons.jpg) -0.35rem -23.9rem no-repeat;
+	background-size: 3rem 30rem;
+}
+
+.footer li:nth-child(3) a{
+	background: url(../images/icons.jpg) -0.35rem -26.1rem no-repeat;
+	background-size: 3rem 30rem;
+}
+
+.footer li:nth-child(4) a{
+	background: url(../images/icons.jpg) -0.35rem -28.25rem no-repeat;
+	background-size: 3rem 30rem;
+}
+
+.footer li h3{
+	font:normal 12px/0.8rem "Microsoft Yahei";
+	color:#949392;
+	text-align: center;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			margin:0;
+		}
+		.con div{
+			width:23%;
+			height: 200px;
+			border:1px solid #000;
+			background-color: gold;
+			margin:1%;
+			box-sizing: border-box;
+			float: left;
+		}
+		/*响应式布局：
+		就是使用媒体查询的方式，通过查询浏览器宽度，不同的宽度应用不同的样式快
+		每个样式块对应的是该宽度下的布局方式，从而实现响应式布局。*/
+		@media (max-width: 800px){
+			.con div{
+				width:46%;
+				margin:2%;
+			}
+		}
+
+		@media (max-width: 500px){
+			.con div{
+				width:94%;
+				margin:3%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+	</div>
+</body>
+</html>

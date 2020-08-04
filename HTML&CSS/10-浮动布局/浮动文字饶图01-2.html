@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文字饶图</title>
+	<!-- 浮动元素后面没有浮动的元素会占据浮动元素位置，
+	没有浮动的元素内的文字会避开浮动的元素，形成文字饶图 -->
+	<style>
+		.con{
+			width: 450px;
+			height: 210px;
+			border:1px solid #000;
+			margin:50px auto 0;
+		}
+
+		.pic{
+			width: 70px;
+			height: 70px;
+	/*		background-color: #0ff;*/
+			float: left;
+			margin:10px;
+		}
+
+		.text{
+			height: 140px;
+			/*background-color: gold;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="pic"><img src="../image/1.jpg" alt="picture" width="70px" height="70px"></div>
+		<div class="text">浮动的特性：
+		1、浮动元素有左浮动（left），和右浮动（right）
+		2、浮动的元素向左或者向右，碰到元素的边界、其他元素才会停下
+		3、相邻浮动元素可一并在一行，超过父级宽度就换行
+		4、浮动让行内元素或块元素转换为行内块元素（没有间隙）
+		6、父元素如果没有设置尺寸（一般高度不设定）父元素内整体浮动的元素无法撑开父元素，父元素需要清除浮动
+		5、浮动元素后面没有浮动的元素会占据浮动元素位置，没有浮动的元素内的文字会避开浮动的元素，形成文字饶图
+	<!-- 	6、父元素如果没有设置尺寸（一般高度不设定）父元素内整体浮动的元素无法撑开父元素，父元素需要清除浮动
+		7、浮动元素之间没有垂直margin合并
+		</div> -->
+	</div>
+
+</body>
+</html>

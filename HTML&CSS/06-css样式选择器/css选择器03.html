@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*组选择器：
+		多个选择器，如果有同样的样式设置，可以使用组选择器*/
+		.box2,.box3,.box4{
+			font-size: 20px;
+			font-family: '隶书';
+			line-height: 20px;
+			color: 00ffee;
+		}
+		.box1{
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 10px;
+		}
+
+		/*伪类选择器：
+		常用的伪类选择器有hover，表示鼠标悬停在元素上时的状态，
+		伪类选择器有before和after，他们可以通过样式在元素中插入内容*/
+		.link{
+			text-decoration: none;
+			font-size: 20px;
+		}
+		.link:hover{
+			color: green;
+			font-weight: bold;
+			
+		}
+
+
+		.div1:before{
+			content: "·前面文字";
+			color: green;
+		}
+		.div2:after{
+			content: "。后面";
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="box1">优雅也分等级：</div>
+	<div class="box2">三等优雅靠努力锻炼得来</div>
+	<div class="box3">二等优雅随尊贵出身出来</div>
+	<div class="box4">一等优雅被委屈历练出来</div>
+	
+	<a href="http://www.dogedoge.com" class="link">多吉网</a>
+
+	<div class="div1">是非天天有</div>
+	<div class="div2">不听自然无</div>
+</body>
+</html>

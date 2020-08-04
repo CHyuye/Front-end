@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+		}
+		.banner{
+			width: 960px;
+			height: 150px;
+			background-color: cyan;
+			margin:0 auto;
+		}
+
+		.menu{
+			width: 960px;
+			height: 80px;
+			margin:0 auto;
+			background-color: lightgreen;
+			text-align: center;
+			font:bold 24px/80px 'Micrsoft Yahei';
+			opacity: 0.3;
+		}
+		
+		/*新建一个div占位，解决文档流脱离,下面的文档跳动的bug*/
+		.menu_back{
+			width: 960px;
+			height: 80px;
+			margin:0 auto;
+		}
+
+		p{
+			text-align: center;
+			color: red;
+		}
+	</style>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			var $menu = $('.menu');
+			var $menu_back = $('.menu_back');
+
+			// 页面滚动事件 —— scroll
+			$(window).scroll(function(){
+				var iNum = $(document).scrollTop();
+
+				if(iNum>200)
+				{	
+					// 通过定位改变菜单栏的位置属性，固定在顶部
+					$menu.css({
+						'position':'fixed',
+						'left':'50%',
+						'top':'0px',
+						'margin-left':'-480px'
+					})
+					$menu_back.show();
+				}
+				else
+				{
+					//使置顶的菜单，改变会无属性状态，水平居中
+					$menu.css({
+						'position':'static',
+						'margin-left':'auto'
+					})
+					$menu_back.hide();
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="banner"></div>
+	<div class="menu">菜单</div>
+	<div class="menu_back"></div>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<p>文档内容</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>	
+</body>
+</html>

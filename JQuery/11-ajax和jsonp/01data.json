@@ -1,0 +1,35 @@
+/*
+	json -- Javascript Object Notation的首字母意思是JavaScript对象表示法
+	JavaScript自定义对像
+	var oMan ={
+		name = 'tom',
+		age = 16,
+		talk:function(s){
+		alert('我会说'+s);
+		}
+	}
+	
+	这里说的json指的是类似于JavaScript的对象的一种数据格式，目前这种数据格式比较流行，逐渐替换掉了传统的xml数据格式 
+
+	json数据格式：
+	{
+		"name":"Tom",
+		"age":"18"  //最后一条不用加逗号
+	}
+	json数据格式的属性名称和字符串值需要用双引号引起来，用单引号或者不用引号会导致读取数据报错
+
+	json的另外一种数据格式是数组，和JavaScript中的数组字面量相同
+	{"tom",18,"programmer"}
+
+*/
+
+{
+	"name":"Chenhan",
+	"age":20,
+	"habit":"play code",
+	"lover":"xieyu",
+	"height":"165cm",
+	"weight":"50kg",
+	"info":["male","student"]
+}
+

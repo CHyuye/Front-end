@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script scr="js/bootstrap.min.js"></script> -->
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+<!-- 		<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+
+</head>
+<body>
+	<!-- Bootstrap导航条
+	1.navbar  声明导航条
+	2.navbar-default       声明默认导航条样式，白色
+	2.navbar-inverse       声明反白的导航条样式，黑色
+	3.navbar-static-top    去掉导航条的圆角
+	4.navbar-fixed-top     固定到顶部的导航条
+	5.navbar-fixed-bottom  固定到底部的导航条
+	6.navbar-header        申明logo的容器
+	7.navbar-brand         针对logo等固定内容的样式
+	8.nav navbar-nav       定义导航条中的菜单
+	9.navbar-form          定义导航条的表单
+	9.navbar-btn           定义导航条的按钮
+	10.navbar-text         定义导航条中的文本
+	11.navbar-left         菜单靠左，
+	12.navbar-right        菜单靠右 -->
+
+	<div class="navbar navbar-inverse navbar-static-top">		
+		<div class="container">
+			
+			<!-- 定义logo和切换小图标   -->
+			<div class="navbar-header">
+
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<a href="#" class="navbar-brand">LOGO</a>
+			</div>
+			<div class="collapse navbar-collapse" id="mymenu">
+
+				<!-- 定义菜单   -->
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#">公司简介</a></li>
+					<li><a href="#">解决方案</a></li>
+				</ul>
+
+				<!-- 定义菜单里面的表单   -->
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" name="" class="form-control">
+							<span class="input-group-btn">
+								<button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

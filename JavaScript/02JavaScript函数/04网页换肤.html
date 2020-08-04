@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/skin01.css" id="link01">
+	<script>
+		window.onload = function(){
+			var oBtn01 = document.getElementById('skin01');
+			var oBtn02 = document.getElementById('skin02');
+			var oLink = document.getElementById('link01');
+
+			oBtn01.onclick = function(){
+				oLink.href = "./css/skin02.css";
+			}
+			oBtn02.onclick = function(){
+				oLink.href = "./css/skin01.css";
+			}
+
+
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="skin1" id="skin01">
+	<input type="button" value="skin2" id="skin02">
+</body>
+</html>

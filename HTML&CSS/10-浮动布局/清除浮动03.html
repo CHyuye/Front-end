@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动</title>
+	<style>
+
+		/*清除浮动的问题：在父级类没有设置高度和子级元素设置了浮动时，才会需要清除浮动*/
+		/*清除浮动的三种方法：
+			1、在父级增加 overflow：hidden
+			2、在最后的一个子元素的后面增加一个空的div，给他的样式属性clear:both（不推荐）
+			3、使用成熟的清除浮动样式类，clearfix（大众方法）*/
+		.list{
+			width: 190px;
+			/*height: 300px;*/
+			border:1px solid #000;
+
+			margin:50px auto 0;
+			padding:0px;
+			list-style: none;
+			
+			/*1、在父级增加 overflow：hidden*/
+			/*overflow: hidden;*/
+		}
+
+		.list li{
+			width: 40px;
+			height: 40px;
+			background-color: gold;
+			margin:10px;
+			float: left;
+		}
+		
+		/*3、使用成熟的清除浮动样式类，clearfix（大众方法）
+		.clearfix:after{
+			content: "";
+			display: table;
+			clear: both;
+		}*/
+
+		/*一般在开发时，会做一个全面的方案，同时解决清除浮动和塌陷问题，下面就是把它们合并在一起*/
+		
+		.clearfix:after,.clearfix:before{
+			content: "";
+			display: table;
+		}
+		.clearfix:after{
+			clear:both;
+		}
+		/*解决浏览器兼容问题*/
+		.clearfix{
+			zoom:1;
+		}
+
+
+	</style>
+</head>
+<body>
+	<ul class="list clearfix">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<li>9</li>
+		<!-- <div style="clear:both"></div>   2、在最后的一个子元素的后面增加一个空的div，给他的样式属性clear:both（不推荐） -->
+	</ul>
+	
+</body>
+</html>

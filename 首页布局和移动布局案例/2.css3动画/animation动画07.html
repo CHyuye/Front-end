@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation动画</title>
+	<!-- animation动画：
+	1.@keyframes 定义关键帧动画
+	2. animation-name 动画名称
+	3.animation-duration 动画时间
+	4.animation-timing-function 动画曲线 liner（匀速）ease（缓冲）steps（步数）
+	5.animation-delay 动画延迟
+	6.animation-iteration-count 动画播放次数 n|infinite(无限次)
+	7.animation-direction 动画结束后是否反向还原 normal | alternate
+	8.animation-play-state 动画状态paused（停止）running（运动）
+	9.animation-fill-mode 动画前后的状态none（缺省）forwards（结束时停留在最后一帧） backwards（开始时停留在定义的开始帧）both（前后都应用）
+	10.animation：。。。。。。。同时设置多个属性 -->
+	<style>
+		/*定义动画*/
+		@keyframes moving{
+			from{
+				width:100px;
+			}
+			to{
+				width:500px;
+			}
+		}
+
+		.box{
+			width:100px;
+			height: 100px;
+			background: #0ff;
+			border:1px solid #f0F;
+			animation: moving 1s ease 0s infinite alternate;
+			/*animation-play-state: paused;*/
+		}
+		.box:hover{
+			animation-play-state: paused;
+			/*animation-play-state: running;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

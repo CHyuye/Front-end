@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+
+			/*
+			$('#btn').click(function(){
+				alert('click事件');
+			})
+			*/
+
+			// bind() 函数可以绑定多个函数，触发事件
+			$('#btn').bind('click mouseover',function(){
+				alert('触发事件绑定的函数');
+
+				// 解除mouseover事件的绑定，使第二次不再触发
+				$(this).unbind('mouseover');
+			})
+		})
+	</script>
+</head>
+<body>
+	<input type="button" value="提交" id="btn">
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+			获取元素的第二种方式： 标签获取元素
+			getElementByTagName方式来获取页面上的某一个标签，
+			获取到的是一个选择集，不是数组，但是可以用下标的方式操作选择集里面的标签元素
+		*/
+		window.onload = function(){
+			// 通过标签名称获取li元素，获取到的是一个选择集
+			var aList = document.getElementsByTagName('li');
+			var aLen = aList.length;
+			alert(aList.length);
+
+			// 不能给选择集设置属性
+			// aList.style.backgroundColor = 'red';  不能使用这样使用
+			// alist[0].style.backgroundColor = 'gold';  // 单独给一个li设置属性
+			/*
+			同时给所有li加背景色
+			for(var i=0;i<aLen;i++)
+			{
+				aList[i].style.backgroundColor = 'lightgreen';
+			}
+			*/
+
+			// 隔行换色
+			var oUl = document.getElementById('list1');
+			var aList2 = oUl.getElementsByTagName('li');
+			var aLen2 = aList2.length;
+
+			alert(aLen2);
+
+			for(var i=0;i<aLen2;i++)
+			{
+				if(i%2==0)
+				{
+					aList2[i].style.backgroundColor = 'lightblue';
+				}
+			}
+		}
+	</script>
+	
+	<style>
+		.list1, .list2{
+			list-style: none;
+		}
+	</style>
+
+</head>
+<body>
+	<ul class="list1" id="list1">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+
+	<ul class="list2" id="list2">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+</body>
+</html>

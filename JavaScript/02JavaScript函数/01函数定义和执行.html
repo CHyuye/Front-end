@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// 驼峰式定义函数名——前面加 fn + 大写字母第一个
+		function fnMyalert(){
+			alert("Hello world!");
+
+		}
+
+		// 调用函数
+		// fnMyalert();
+
+		function fnChange(){
+			var oDiv = document.getElementById('div1');
+			oDiv.style.fontSize = "30px";
+			oDiv.style.color = "red";
+		}
+
+	</script>
+</head>
+<body>
+	<!-- 标签内调用 -->
+	<div class="div" id="div1" onclick="fnMyalert()">这是一个div函数</div>
+	<input type="button" value="改变div按钮" onclick="fnChange()">
+</body>
+</html>

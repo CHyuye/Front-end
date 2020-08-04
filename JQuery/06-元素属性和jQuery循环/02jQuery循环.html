@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			var $li = $('.list li');
+
+			// each()方法就是jQuery的循环
+			$li.each(function(i){
+
+				$li.css({'listStyle':'none'});
+
+				//三种获取循环得到的结果
+				//console.log(i);
+				console.log($(this).index());
+				//console.log( $(this).html() );
+
+				if($(this).index()%2==0)
+				{
+					$(this).css({'backgroundColor':'lightgreen'});
+				}
+				else
+				{
+					$(this).css({'backgroundColor':'#0ff'});
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<ul class="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script style="text/javascript">
+		// 属性写法：
+		// 1.html的属性与js里面的属性写法一样
+		// 2.class 属性写成 “className”
+		// 3.style 属性里面的属性，有横杠的改成驼峰式，比如：font-size 改 style fontSize
+
+		window.onload = function(){
+
+			var oDiv = document.getElementById('div1');
+			var oA = document.getElementById('link');
+			var oDiv2 = document.getElementById('div2');
+
+			// 读取属性
+			var sId = oDiv.id
+			alert(sId);
+
+			// 写属性 '.'操作方式
+			oDiv.style.color = "red";
+			oA.href = "http://www.baidu.com";
+			oA.title = "这是百度链接";
+
+			// class 属性写成 “className” 特殊的地方
+			oDiv2.className = "box2";
+			oDiv.style.fontSize = "30px";
+
+			// "[]"  操作属性
+
+			var sMystyle = "fontSize";
+			var sValue = "30px";
+
+			// oA.style.sMystyle = sValue;  这句话是不起作用的
+
+			// 属性用变量来代替的话需要用[]来操作
+			oA.style[sMystyle] = sValue;
+		}
+	</script>
+	
+	<style>
+		.box{
+			font-size: 20px;
+			color:#0ff;
+		}
+
+		.box2{
+			font-size: 30px;
+			color:pink;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="div1">这是一个div元素</div>
+	<a href="#" id="link">天天生鲜</a>
+	<div class="box" id="div2">这是js控制</div>
+</body>
+</html>

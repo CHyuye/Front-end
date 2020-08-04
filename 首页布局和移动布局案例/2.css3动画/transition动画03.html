@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width:200px;
+			height: 300px;
+			margin:50px auto 0;
+			/*使用定位对文字进行定位*/
+			position: relative;
+			overflow: hidden;
+		}
+
+		.pic_info{
+			position: absolute;
+			left: 0;
+			top: 300px;
+			text-align: center;
+			height: 180px;
+			background-color: rgba(0,0,0,0.2);
+			color: #fff;
+			transition:all 1s ease;
+		}
+
+		.box:hover .pic_info{
+			top: 180px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../images/banner01.jpg" alt="banner">
+		<div class="pic_info">
+			<h3>文字标题</h3>
+			<p>文字说明文字说明文字说明文字</p>
+		</div>
+	</div>
+</body>
+</html>

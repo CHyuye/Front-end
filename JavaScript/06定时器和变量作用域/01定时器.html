@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*定时器在JavaScript中的作用：
+		1.制作动画
+		2.异步操作
+		3.函数缓冲与节流
+
+		定时器：
+
+		*/
+
+		function myalert(){
+			alert("Hello World!")
+		}
+
+		// 只执行一次的定时器，第一个参数填上函数名，第二个参数填时间，单位毫秒，可以不写
+		//var timer01 = setTimeout(myalert, 2000);
+		// 关闭执行一次的定时器，就不会弹出
+		//clearTimeout('timer01');
+
+		// 反复执行的定时器
+		//var timer02 = setInterval(myalert, 3000);
+
+		//匿名函数
+		var time02 = setInterval(function(){
+			alert('hello World');
+		}, 2000);
+
+		//关闭反复执行的定时器
+		clearInterval(time02);
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

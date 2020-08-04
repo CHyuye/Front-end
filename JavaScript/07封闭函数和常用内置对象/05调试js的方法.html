@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 调试程序的方法
+		/*
+		 1.alert
+		 2、console.log
+		 3.document.title
+		*/
+		//只有定义成全局变量，才能在浏览器console查询到
+		var iNum01 = 12;
+		var iNum02 = 24;
+		var iNum03 = 36;
+
+		window.onload = function(){
+			var oBody = document.getElementById('body');
+
+			oBody.style.backgroundColor = 'lightgreen';
+
+			
+			// alert会阻止程序的运行，先弹出
+			//alert(iNum01);
+
+			console.log(iNum01);
+
+			setInterval(function(){
+				iNum01++;
+				console.log(iNum01);
+			},100)
+
+			setInterval(function(){
+				iNum02++;
+				document.title = iNum02;
+			},100)
+		}
+
+	</script>
+</head>
+<body id="body">
+	
+</body>
+</html>

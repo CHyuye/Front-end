@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+
+			//在h1前面的外部插入p
+			$('#p1').insertBefore($('#title01'));
+
+			//在p的后面加入span
+			$('#p1').append($('#span01'));
+
+			//在p的前面加入a
+			$('#link').prependTo($('#p1'));
+
+			//删除节点操作
+			$('#title01').remove();
+		})
+		
+	</script>
+</head>
+<body>
+	<h1 id="title01">这是一个h1元素</h1>
+	<p id="p1">这是一个p元素</p>
+	<span id="span01">span元素</span>
+	<a href="#" id="link">a元素</a>
+</body>
+</html>

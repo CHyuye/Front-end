@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.radio{
+			width: 300px;
+			height: 300px;
+			/*第二种方式就是rgba方法在background-color里面直接使用rgba*/
+			background-color: rgba(0,0,0,0.4);
+			color: white;
+			text-align: center;
+			line-height: 200px;
+			margin:50px auto 0;
+			border:3px solid #000;
+			
+			/*第一个知识点*/
+			/*设置一个角的圆角，例如左上角：*/
+			/*border-top-left-radius: 100px 60px;*/
+
+			/*border-top-left-radius: 100px;*/
+
+			border-top-left-radius: 50%;
+
+			/*第二种方式就是rgba方法在background-color里面直接使用rgba*/
+		}
+		/*rgba可以使需要的块变透明*/
+		/*第一种方式 —— 这种方法有一个缺点就是会把块里面的字都透明化*/
+		.opacity{
+			width: 200px;
+			height: 200px;
+			margin:50px auto 0;
+			color: white;
+			background: black;
+			text-align: center;	
+			/*元素透明的完整写法*/
+			opacity: 0.3;
+			/*兼容性*/
+			filter: alpha(opacity=30);
+		}
+	</style>
+</head>
+<body>
+	<!-- css圆角
+	设置一个角的圆角，例如左上角：
+	border-top-left:30,60px; -->
+
+	<div class="radio">
+		<h3>演示圆角及透明度操作</h3>
+	</div>
+
+	<div class="opacity">
+		<h3>这是一个div</h3>
+	</div>
+</body>
+</html>

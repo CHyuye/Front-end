@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>菜单</title>
+	<style>
+		.menu{
+			width: 694px;
+			height: 50px;
+			/*background-color: red;*/
+			
+			/*去掉小圆点*/
+			list-style:none;
+			margin:50px auto 0;
+			padding:0px;	
+		}
+
+		.menu li{
+			width: 98px;
+			height: 48px;
+			border:1px solid gold;
+			/*display: inline-block;*/
+
+			/*让块标签浮动，排成一行*/
+			float: left;
+			margin-left: -1px;
+
+		}
+
+		.menu li a{
+			display: block;
+			/*background-color: gold;*/
+			height: 48px;
+			line-height: 48px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 16px;
+			font-family: 'Microsoft';
+			color: pink;
+		}
+
+		.menu li a:hover{
+			background-color: gold;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<!-- ul/menu>(li>a{公司简介})*7 -->
+
+	<ul class="menu">
+		<li><a href="#">首页</a></li>
+		<li><a href="#">公司简介</a></li>
+		<li><a href="#">解决方案</a></li>
+		<li><a href="#">公司新闻</a></li>
+		<li><a href="#">行业动态</a></li>
+		<li><a href="#">招贤纳士</a></li>
+		<li><a href="#">联系我们</a></li>
+	</ul>
+	
+</body>
+</html>

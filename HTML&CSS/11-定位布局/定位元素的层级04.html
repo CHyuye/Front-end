@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 定位元素的特性：
+	绝对定位和固定定位的块元素和行内元素会自动的转化为行内块元素 -->
+	<style>
+		.con{
+			width: 500px;
+			height: 500px;
+			border:1px solid #000;
+			margin:50px auto 0;
+			position: relative;
+		}
+
+		.con div{
+			width: 150px;
+			height: 150px;
+			position: absolute;   /*设置绝对定位*/
+		}
+
+		.box1{
+			background-color: #0ff;
+			/*相对于参照元素向左，向下偏移20px*/
+			left: 20px;
+			top: 20px;
+			/*将层级设置为10*/
+			z-index: 10;
+		}
+
+		.box2{
+			background-color: gold;
+			left: 40px;
+			top: 40px;
+
+			z-index: 11;
+		}
+		.box3{
+			background-color: pink;
+			left: 60px;
+			top: 60px;
+		}
+		.box4{
+			background-color: yellowgreen;
+			left: 80px;
+			top: 80px;
+		}
+	</style>
+</head>
+<body>
+	<div class="con">
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+	</div>
+</body>
+</html>

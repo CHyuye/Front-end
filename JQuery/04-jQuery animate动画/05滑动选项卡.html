@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){
+			var $btn = $('.btns input');
+			var $slides = $('.cons .slides');
+
+			$btn.click(function(){
+				// this关键字 指的是原生this，它表示当前点击的对象
+				//给当前点击的按钮加上current样式，并去除其他按钮上的样式
+				//siblings() 选择同级元素
+				$(this).addClass('current').siblings().removeClass('current');
+
+
+				// alert($(this).index());
+				//通过$(this).index() 的方法获取选项卡索引值，按钮的切换给它增加或减少active样式
+				//$div.eq($(this).index()).addClass('active').siblings().removeClass('active');
+
+				// $slides.css({'left':'-400'*$(this).index()});
+
+				$slides.stop().animate({'left':-400*$(this).index()},10);
+			})
+		})
+	</script>
+
+	<style>
+		.btns input{
+			width: 100px;
+			height: 50px;
+			background-color: #ddd;
+			border:0px;
+			outline: none;
+		}
+		.btns .current{
+			background-color: gold;
+		
+		}
+	
+		.cons{
+			width: 400px;
+			height: 400px;
+			overflow: hidden;
+			position: relative;
+		}	
+		.slides{
+			widows: 1200px;
+			height: 400px;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		.cons .slides div{
+			width: 400px;
+			height: 400px;
+			background-color: #0ff;
+			font-size: 30px;
+			text-align: center;
+			line-height: 400px;
+			display:block;
+			float: left;	
+
+		}
+		
+		
+
+	</style>
+</head>
+<body>
+	<div class="btns">
+		<input type="button" value="01" class="current">
+		<input type="button" value="02">
+		<input type="button" value="03">
+	</div>
+
+	<div class="cons">
+		<div class="slides">
+			<div>选项卡一的内容</div>
+			<div>选项卡二的内容</div>
+			<div>选项卡三的内容</div>
+		</div>
+	</div>
+</body>
+</html>

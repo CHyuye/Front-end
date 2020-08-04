@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 引入jQuery库需要用一个script标签，写js需要另外开一个 -->
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+	<!--
+	 jQUery的用法思想之一： 
+	 选择某个网页元素，然后对它进行某种操作
+	-->
+
+	<script>
+		
+		window.onload = function(){
+			var oDiv = document.getElementById('div');
+			alert('这是原生js' + oDiv);
+		}
+
+		/*
+		一般来说 ready要比window.onload 要快
+		原因是：window.onload是要等标签加载完后，在渲染完之后才运行
+		ready是等标签加载完后就直接运行
+		*/
+
+		// jQuery ready的完整写法
+		// $(document).ready(function(){
+		// 	var $div = $('#div');
+		// 	alert('这是jQuery' + $div);
+		// })
+
+		//简写方式
+		$(function(){
+			var $div = $('#div');
+			alert('JQuery弹出'+$div)
+		})
+
+	</script>
+</head>
+<body>
+	<div id="div">这是一个div</div>
+</body>
+</html>

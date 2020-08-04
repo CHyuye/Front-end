@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		// 调试程序的方法
+		/*
+		 1.alert
+		 2、console.log
+		 3.document.title
+		*/
+		window.onload = function(){
+			var iPi = Math.PI;
+			// alert(iPi);
+
+			// Math.random() 方法只会随机弹出一个0-1的随机数，下面的函数是随即弹出20的数
+			var arr = [];
+			for(var i=0;i<20;i++)
+			{
+				var iNum01 = Math.random();
+				arr.push(iNum01);
+			}
+			console.log(arr);
+
+			//Math.floor() 方法 会让随机数向下取整
+			var iExp = Math.floor(5.6);
+			// Math.ceil() 方法会让随机数向上取整
+			var iExp02 = Math.ceil(5.2);
+			//alert(iExp);
+			//alert(iExp02);
+
+			//做一个随机数函数，10-20随机
+			var iN01 = 10;
+			var iN02 = 20;
+			var arr01 = [];
+			for(var i=0;i<40;i++)
+			{	
+				var iNum02 = Math.floor((iN02 - iN01 + 1)*Math.random()) + iN01;
+				arr01.push(iNum02);
+			}
+
+			console.log(arr01);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

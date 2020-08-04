@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		iNum01 = 2;
+		iNum02 = '2';
+		// '==' 与 '==='的区别 
+		// '==' 它不会区分数据类型，只要数值相同，就返回true
+		if(iNum01==iNum02){
+			alert('相等');
+		}
+		else{
+			alert('不相等');
+		}
+
+		// '===' 它要区分数据类型,数据类型不同，返回false
+		if(iNum01 === iNum02){
+			alert('相等');
+		}
+		else{
+			alert('不相等');
+		}
+
+		// '!' 否 运算符 ——— 将逻辑运算的结果取反，比如运算是true，取反后是false
+		if(! 4>3){
+			alert('大于');
+		}
+		else{
+			alert('不大于');
+		}
+
+		// '!=' 不等于 
+		if(4!=5){
+			alert(true);
+		}
+		else{
+			alert(false);
+		}
+
+		// '&&' and 而且 满足这个条件而且满足另一个条件 结果返回true
+		if(4>3 && 6>5){
+			alert(true);
+		}
+		else{
+			alert(false);
+		}
+
+		// '||' 或者 满足一个条件或者满足另一个条件，结果返回true
+		if(4>3 || 4>5){
+			alert(true);
+		}
+		else{
+			alert(false);
+		}
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

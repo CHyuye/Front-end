@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>翻面效果</title>
+	<style>
+		.box{
+			width:480px;
+			height: 480px;
+			margin:50px auto 0;
+			border:2px solid #0ff;
+			position: relative;
+			transform-style: preserve-3d;
+		}
+		.box img{
+			position:absolute;
+			left: 0px;
+			top: 0;
+			transform: perspective(800px) rotateY(0deg);
+			transition: all 500ms ease;
+			/*backface-visibility 设置盒子背面是否可见*/
+			/*backface-visibility: visible;  可见*/
+			backface-visibility: hidden;  /*翻转到背面不可见*/
+
+		}
+
+		.box:hover img{
+			transform: perspective(800px) rotateY(180deg);
+		}
+
+		.box .back{
+			width: 480px;
+			position: absolute;
+			left: 0px;
+			top:0;
+			font-size: 20px;
+			line-height: 480px;
+			text-align: center;
+			transform-style: preserve-3d;
+			transform: perspective(800px) rotateY(-180deg); /* 需要转动方向一致设置为-180deg*/
+			transition: all 500ms ease;
+			backface-visibility: hidden;
+		}
+
+		.box:hover .back{
+			transform: perspective(800px) rotateY(0deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../images/尘文.jpg" alt="backpic" width="480px" height="480px">
+
+		<div class="back">
+			图片文字的说明
+		</div>
+	</div>
+</body>
+</html>

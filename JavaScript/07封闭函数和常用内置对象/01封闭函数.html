@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+		封闭函数 —— JavaScript中匿名函数的另外一种写法，创建一个一开始就执行而不用命名的函数
+		封闭函数里面定义的变量，，不会影响到外部，外部也影响不到里面
+		*/
+		// 普通函数
+		/*
+		function myalert(){
+			alert('Hello World!');
+		}
+		myalert();
+		*/
+		//转换为封闭函数
+		// 第二种写法： !function(); 或者 前面加 '~' 最好被这样写
+		/*
+		!function(){
+			alert('');
+		}();
+		*/
+		// 封闭函数的第一写法：()();
+		(function(){
+			//alert('Hello World!');
+		})();
+
+		var iNum01 = 12;
+		function myalert(){
+			alert('Hello World');
+		}
+
+		// 封闭函数真的好用，可以防止代码功能实现的矛盾
+		// 封闭函数前面加分号，为了防止js代码引入压缩是出错
+		;(function(){
+			var iNum01 = 24;
+			function myalert(){
+				alert('Hello Hello');
+			}
+			alert(iNum01);
+			myalert();
+		})();
+
+		myalert();
+		alert(iNum01);
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

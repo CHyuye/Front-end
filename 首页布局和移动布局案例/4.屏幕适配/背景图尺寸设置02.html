@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		.box{
+			width:240px;
+			height: 240px;
+			border:1px solid #000;
+			margin:50px auto 0;
+			background: url(../images/尘文.jpg) no-repeat;
+			
+			/*background强制改变背景图大小新属性：*/
+			/*第一种：用长度值指定背景图像大小*/
+			/*background-size: 240px 240px;*/
+			
+			/*第二种：用百分比指定背景图大小
+			background-size: 100% 100%;*/
+
+			/*第三种：auto 背景图真实大小*/
+			/*background-size: auto;*/
+
+			/*第四种：cover：将背景图进行缩放，缩放到完全覆盖容器，可能会溢出
+			background-size: cover;*/
+
+			/*第五种：contain：将背景图缩放到完全装进容器里*/
+			background-size: contain;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		
+	</div>
+</body>
+</html>

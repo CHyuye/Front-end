@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<script src="../js/jquery-3.4.1.min.js"></script>
+	<style>
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: #f00;
+			display: none;
+		}
+		#btn{
+			font-size: 20px;
+			color:red;
+		}
+	</style>
+	<script>
+		$(function(){
+			$('#btn').click(function(){
+				//fadeIn()动画淡出，可以加参数，时间，动画方式和匿名函数执行其他操作
+				/*
+				//fadeOut() 动画淡入效果
+				$('.box').fadeOut()
+				$('.box').fadeIn(1000,function(){
+					alert('done!');
+				})
+				*/
+				/*
+				fadeToggle()动画淡出，淡入
+				$('.box').fadeToggle(1000,function(){
+					alert('done!');
+				})
+				*/
+
+				/*
+				show() 显示
+				hide() 隐藏
+				$('.box').show(1000,function(){
+					alert('done!')
+				})
+				
+				toggle()显示和隐藏
+				$('.box').toggle(1000,function(){
+					alert('done!')
+				})
+				*/
+
+				// $('.box').slideDown(1000);
+				//div卷起，向下展开
+				$('.box').slideToggle();
+
+
+			})
+		})
+		//好好敲代码
+		
+
+	</script>
+</head>
+<body>
+	<input type="button" value="动画" id="btn">
+	<div class="box"></div>
+</body>
+</html>
